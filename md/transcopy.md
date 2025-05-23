@@ -1,11 +1,8 @@
-transcopy
+# Transcopyright
 
-( E36fix981014
+E36fix981014
 
-.html
-
- 
-[To Xanadu Australia Home Page](../index.html)
+[To Xanadu Australia Home Page](../index.md)
 
  
 
@@ -27,9 +24,10 @@ transcopy E36
 .html
 
 asof 95.4.9
-**Transcopyright:**
 
-**Pre-Permission for Virtual Republishing**
+## Transcopyright
+
+### Pre-Permission for Virtual Republishing
 
 **Theodor Holm Nelson**
 
@@ -41,7 +39,7 @@ asof 95.4.9
 
  
 
-**SUMMARY**
+## Summary
 
 The on-line copyright problem may be resolvable by a simple, sweeping
 permission method.  This proposed system, which anyone may use, allows
@@ -53,7 +51,7 @@ is immediately available), and users are not spied upon.
 A wording and an abbreviation for this permission system are proposed
 here.
 
-**INTRODUCTION**
+## Introduction
 
 Someone who asks, "How do we keep people from stealing food?" is asking
 you to consider only his side of the issue, without addressing underlying
@@ -90,7 +88,7 @@ history, and present it as a method anyone can use.  It is a legal
 permission doctrine with far-reaching consequences, whose benefits may
 be considerable.
 
-**THE OBJECTIVE**
+## The Objective
 
 From the beginning, the objective of Project Xanadu was to facilitate
 a new kind of literature: a new populist medium, a many-to-many publishing
@@ -128,7 +126,7 @@ copy of the materials, all purchased anew from the original publisher. 
 What may be just as important, it provides incentives for participation
 and a method for honest re-use in a system from which all benefit.
 
-**A PERMISSION DOCTRINE**
+## A Permission Doctrine
 
 What is proposed here turns out actually to be, at its center, a permission
 doctrine.  A new permission doctrine may be easily added to our culture;
@@ -146,7 +144,7 @@ This has a number of benefits: (1) the user knows the origin; (2) this
 identification can be part of a proof of purchase; (3) in principle, any
 recipient may republish in the same fashion, ad infinitum.
 
-LONG FORM PERMISSION
+## Long Form Permission
 
 To allow this, the copyright holder must therefore make a statement
 like the following.  (Note that I am still tinkering with the provisions
@@ -161,7 +159,7 @@ address for bytes to be included in a particular new context; and provided
 This may be adequate to achieve the desired result, as we will consider
 below.  It also leaves room for a number of possible variations.
 
-**IRONICALLY SIMPLE**
+## Ironically Simple
 
 This may seem over-simple, when mighty technical and legislative solutions
 are being sought by so many parties.  But it shifts the ground of
@@ -179,7 +177,7 @@ benefit.  More traditional publishers and authors may hesitate, not
 recognizing that all the traditional objectives may be satisfied by this
 system.
 
-**IMPLIED ASPECTS**
+## Implied Aspects
 
 Implied in this method are certain other aspects of implementation. 
 For instance, the user must be given a receipt for each portion purchased,
@@ -190,7 +188,7 @@ possible once again (by the new recipient).  And the republisher must
 notify the original publisher of the republication, so that these re-uses
 may be seen.
 
-**SUPPORTING SOFTWARE ASPECTS**
+## Supporting Software Aspects
 
 This permission doctrine has certain minimal requirements for supporting
 software.  Certain unusual software features are required:
@@ -217,14 +215,14 @@ program (or feature) must then prepare the document for skeleton transmission,
 stripping out the actual bytes and substituting the original addresses
 in the necessary format for their repurchase.
 
-**OWNERSHIP OF EACH FINAL COPY**
+## Ownership of Each Final Copy
 
 The recipient who purchases the suggested materials owns a final copy,
 like any book, each portion legally purchased.  Even if the materials
 are later withdrawn from sale, each copy already acquired in this way retains
 itsownership status as the possession of the recipient.
 
-**COMPATIBILITY, INTEROPERABILITY**
+## Compatibility, Interoperability
 
 Note that any party may offer transcopyright; and note that different
 variations of this arrangement, with different details of availability,
@@ -232,7 +230,7 @@ may be mixed and matched in a given document (see below).  Regardless
 of such variations, a legitimate mixed copy is still owned by the final
 recipient.
 
-**THE PROPOSED FORMAT AND ITS LEGAL STATUS**
+## The Proposed Format and Its Legal Status
 
 I propound for this permission system an extremely simple presentational
 format. A publisher signifies participation by the following notice, in
@@ -281,9 +279,9 @@ widely accepted and used.  If others use the transcopyright notification
 with the intent given here, it will be recognized in law (like shareware
 and copyleft) as being synonymous with the longer permission notice.
 
-**VARIATIONS NOT COVERED;**
+## Variations Not Covered
 
-**DIFFERENT JURISDICTIONS**
+## Different Jurisdictions
 
 This arrangement is for on-line screen viewing and keepage of digital
 data, not for paper or other solid media.
@@ -304,7 +302,7 @@ own systems.  (For instance, the contracts of Project Xanadu will
 have specific clauses with respect to length of availability, paper printout
 and site licensing.)
 
-**ENFORCEMENT AND BENEFITS**
+## Enforcement and Benefits
 
 This system is not automatically enforced, but neither is any other
 feasible electronic copyright system.  It is no more or less enforceable
@@ -319,14 +317,14 @@ a strong argument in its favor.
 
 ---
 
-**ACKNOWLEDGMENT**
+## Acknowledgment
 
 My especial thanks to Robert W. Fiddler, Esq., of Great Neck, N.Y. for
 over twenty-five years of friendship, generous legal tutoring and delightful
 banter that have helped shape these ideas; but any errors, misunderstandings
 or improprieties are my own.
 
-**BIBLIOGRAPHY**
+## Bibliography
 
 1.   Nelson, Theodor Holm, _Literary Machines_. 
 Availabile from Mindful Press, 3020 Bridgeway #295, Sausalito CA 94965,

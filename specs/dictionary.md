@@ -107,3 +107,27 @@ A hypertext backend designed to allow multiple concurrent users to have fast ret
 ## Udanax Green:Udanax Green objects
 
 Nodes, accounts, documents, links, and data-bytes are all objects in the Udanax Green address space (also called &quot;the docuverse&quot;). ([source](green/febe/glossary.html))
+
+## canopy
+
+A balanced binary tree structure of CanopyCrums used in Udanax Gold to propagate property changes and manage recorders. ([source](history/index.html))
+
+## detector
+
+An object clients register to receive callbacks when editions or range elements change, such as when placeholders are filled. ([source](history/index.html))
+
+## coordinate space system
+
+A general framework defining positions, regions, mappings, and order specifications that describe the domain of tables. ([source](gold/download/index.html))
+
+## enfilade
+
+The tree-based data structure underlying Xanadu storage, allowing efficient versioned documents and transclusion. ([source](history/index.html))
+
+## The Ent
+
+A more advanced implementation of enfilade concepts developed for Udanax Gold. ([source](gold/index.html))
+
+## transclusion
+
+The reuse of content by reference to its original location so the same material can appear in many contexts without duplication. ([source](green/index.html))

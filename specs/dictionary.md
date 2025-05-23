@@ -226,7 +226,6 @@ publishers might interact. ([source](../md/future.md#transpublication))
 Ted Nelson's statement of principles describing how Xanadu differs from other
 [hypertext](#hypertext) systems. ([source](../md/ideal.md#why-do-they-call-us-a-cult))
 
-
 ## Inforights
 
 Also known as the "Bill of Information Rights," this text proposes a framework
@@ -293,4 +292,3 @@ documents, enabling open electronic publishing. ([source](external/faq.html))
 
 A permission system proposed by Ted Nelson that allows republication of digital
 materials while tracking ownership and crediting authors. ([source](../md/transcopy.md#summary))
-

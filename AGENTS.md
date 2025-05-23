@@ -11,6 +11,22 @@
   - Links inside the Markdown still point to `.html` files and rely on images in
     `udanax/images`.
 
+## Purpose
+
+- the purpose of this repository is to create and curate the documents in the
+  specs/ folder, to ensure clear definitions and specifications using the files
+  in the md/ folder as reference, and as a final backstop, the files in the
+  udanax folder.
+
+## Rules
+
+- whenever you use a novel term, it must be in the dictionary. you can only add
+  novel terms if they are mentioned somewhere in the reference md/ or udanax/
+  folders.
+- any time you use a term in the dictionary, you must link the usage of the word
+  to the definition of the word using a markdown link, so that users can easily
+  navigate to the dictionary definition.
+
 ## Tips
 
 - Search across many files with `grep -r` or `find` since there are numerous
@@ -26,5 +42,5 @@
 - Smalltalk source files in `udanax/gold/download/` are provided for historical
   context. There is no active environment to run them, so they generally do not
   need modification.
-- When researching the repository, search within `md/` using `grep` or `find`
-  to locate relevant information quickly.
+- When researching the repository, search within `md/` using `grep` or `find` to
+  locate relevant information quickly.

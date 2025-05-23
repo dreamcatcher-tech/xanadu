@@ -1,0 +1,1084 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Appendix C - Manual Pages</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B><font size="5">Appendix 
+              C<br>
+              </font>Manual Pages</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" -->
+      <div align="center">
+        <div align="center">
+          <div align="center">
+            <div align="center">
+              <div align="center">
+                <div align="center">
+                  <div align="center">
+                    <div align="center">
+                      <div align="center"><font size=6> </font></div>
+                      <font size=2> BACKEND(L) LOCAL COMMANDS BACKEND(L)<br>
+                      <br>
+                      </font>&nbsp; 
+                      <dir> </dir>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> backend</b> - single user Xanadu™ 88.1x backend<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          backend<br>
+          <br>
+          TYPICAL USAGE<br>
+          <br>
+          intf <b>backend</b> fex<br>
+          <br>
+          DESCRIPTION<br>
+          <br>
+          <b> Backend</b> accepts requests from a frontend, such as <b>fex</b>(<b>L</b>), 
+          through <b>stdin</b> and responds through <b>stdout</b> according to 
+          the <b>FeBe Protocol</b> <b>88.1x</b> .<br>
+          <br>
+          Metaprotocol<br>
+          <br>
+          Initially <b>backend</b> conducts a dialogue with the frontend to establish 
+          that both parties understand a common protocol. This &quot;metaprotocol&quot; 
+          consists of one or more newline characters (i.e., byte value 0x0a) from 
+          the frontend as synchronization; before the newlines, all input is ignored. 
+          After the newlines <b>backend</b> expects to receive the string:<br>
+          <br>
+          P0~<br>
+          <br>
+          (i.e., byte values 0x50 0x30 0x7e). On seeing this, <b>backend </b>responds 
+          with:<br>
+          <br>
+          \nP0~<br>
+          <br>
+          (0x0a 0x50 0x30 0x7e) meaning that <b>Xanadu</b> <b>FeBe Protocol</b> 
+          <b>88.1x</b> represented by &quot;0&quot; is understood. If <b>backend</b> 
+          sees any other input after the last newline, it responds with:<br>
+          <br>
+          \nP?~<br>
+          <br>
+          (0x0a 0x50 0x3f 0x7e) meaning that it did not understand the frontend, 
+          and then exits.<br>
+          <br>
+          Error Redirection<br>
+          <br>
+          After successful completion of the metaprotocol dialogue, <b>backend</b> 
+          closes <b>stderr</b> and reopens it with the file <b>backenderror</b> 
+          to avoid disrupting the frontend interaction.<br>
+          <br>
+          Data Structure File<br>
+          <br>
+          <b> Backend</b> then attempts to open the file <b>enf.enf</b> in the 
+          current working directory. This file contains the data and links from 
+          all sessions since it was created. If this file does not exist or has 
+          been obviously corrupted, a new one is created.<br>
+          <br>
+          Interactive Session<br>
+          <br>
+          <b> Backend</b> is now ready to accept <b>Xanadu</b> <b>FeBe Protocol 
+          88.1x</b> requests. The session lasts until the frontend issues a quit 
+          request. After <b>backend</b> responds with a quit code the frontend 
+          may exit. After sending the quit code, <b>backend</b> updates <b>enf.enf</b> 
+          and closes it before itself exiting.<br>
+          <br>
+          Accounts<br>
+          <br>
+          When <b>backend</b> starts accepting requests, the working user account 
+          is set to the default account 1.1.0.1, under which new documents and 
+          versions will be created until the working user account is changed with 
+          the x-account request.<br>
+          <br>
+          Note that if the session is using a new enfilade file, neither 1.1.0.1 
+          nor any other account will exist, and must be created before any documents 
+          may be created. To create the account 1.1.0.1, first create the node 
+          1.1 with:<br>
+          <br>
+          create-node-or-account 0.1.1<br>
+          <br>
+          and then create account 1.1.0.1 with:<br>
+          <br>
+          create-node-or-account 0.1.1.0.1<br>
+          <br>
+          Edit Logging<br>
+          <br>
+          <b> Backend</b> records all edit requests in a file called:<br>
+          <br>
+          ln<b>m</b>.<b>d</b>.<b>h</b>:<b>m<br>
+          <br>
+          </b> where <b>m</b>, <b>d</b>, <b>h</b>, and <b>m</b> are the month, 
+          day, hour, and minute, respectively that the backend began execution. 
+          Each line in this file is a single backend request. This format is possible 
+          since the <b>Xanadu FeBe Protocol 88.1x</b> terminator character ‘~’ 
+          and a newline are accepted as identical by <b>backend</b>, and multiple 
+          delimiters before a new request are ignored (treated as null requests). 
+          The file is produced so that edit operations made during any session 
+          may be reproduced later should <b>backend</b> fail, or for whatever 
+          other reason may arise. If you want to redo the operations recorded 
+          in an individual log file, edit that file so that it has at least one 
+          blank line followed by &quot;P0~&quot; at the top, then invoke<font size=5> 
+          </font><b>backend</b> as<br>
+          <br>
+          backend &lt;<b>logfile<br>
+          <br>
+          </b> where <b>logfile</b> is the name of the appropriate edit log. The 
+          edit described above is necessary since the metaprotocol does not appear 
+          in the log.<br>
+          <br>
+          For reconstructing entire enfilades from edit logs, it is useful to 
+          concatenate the relevant logs into one file. To do this, first append 
+          the files together with <b>cat</b>(<b>1</b>), or some other utility. 
+          Then edit the resulting file to remove all quit requests (16~) except 
+          at the last line of the file. This new file may then be used to execute 
+          the contained requests in the manner described above.<br>
+          <br>
+          FILES<br>
+          <br>
+          <b> backenderror</b> - redirected stderr<br>
+          <br>
+          <b> enf.enf</b> - the magic data structure file<br>
+          <br>
+          <b> ln</b>?.?.?:? - the edit log file<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          fex(L), intf(L)<br>
+          <br>
+          <b> Xanadu FeBe Protocol 88.1x Documentation</b>, Xanadu Operating Company, 
+          August 1988<br>
+          <br>
+          BUGS<br>
+          <br>
+          Virtually no sanity checking is performed on the input.<br>
+          <br>
+          There are many possible requests, particularly edit operations on non-existent 
+          addresses and creating documents in non-existent accounts that are likely 
+          to corrupt the data structure.<br>
+          <br>
+          Numeric inputs to the backend (i.e., tumbler digits, sizes and counts) 
+          are currently limited to values representable by 32 bit unsigned integers.<br>
+          <br>
+          Tumblers input to the backend are allowed a maximum depth of 11 tumbler 
+          digits from the last leading zero digit.<br>
+          <br>
+          Text items for insert may be no more than 950 bytes long; larger insertions 
+          must be broken into multiple text items.<br>
+          <br>
+          Longer items are likely to cause the program to fail (see previous bug).<br>
+          <br>
+          Node numbers are meaningless other than as a prefix for account numbers.<br>
+          <br>
+          The data file <b>enf.enf</b> has a size limit around 400K disk blocks 
+          because of a kluged, fixed size allocation table.<br>
+          <br>
+          etc...<br>
+          <br>
+          NOTE<br>
+          <br>
+          Since the data structure is easy to corrupt with invalid, but unchecked, 
+          requests it is a good idea to occasionally copy <b>enf.enf</b> to a 
+          backup file.<br>
+          <br>
+          &nbsp; </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      BACKENDDAEMON(L) LOCAL COMMANDS BACKENDDAEMON(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> backenddaemon</b> - multiple user Xanadu™ 88.1x backend daemon<br>
+          <br>
+          TYPICAL USAGE<br>
+          <br>
+          <b> backenddaemon</b> is usually spawned when necessary by <b>ints</b>(<b>L</b>) 
+          or <b>intx</b>(<b>L</b>), which will be referred to as &quot;glue&quot; 
+          programs.<br>
+          <br>
+          DESCRIPTION<br>
+          <br>
+          <b> Backenddaemon</b> accepts and responds to requests from up to five 
+          frontends through <b>socket</b>(<b>2</b>) connections using the <b>Xanadu</b> 
+          <b>FeBe</b> <b>Protocol</b> <b>88.1x</b> .<br>
+          <br>
+          Error Redirection<br>
+          <br>
+          The first action by the <b>backenddaemon</b> process is to close <b>stderr</b> 
+          and reopen it as the file <b>backenderror</b> to avoid disrupting the 
+          frontend interaction.<br>
+          <br>
+          Parameter and Data Structure Files<br>
+          <br>
+          <b> Backenddaemon</b> attempts to open .<b>backendrc</b> in the working 
+          directory inherited from the process that spawned it, either a glue 
+          program or a shell. This file is used by <b>backenddaemon</b>, both 
+          glue programs, and <b>xlog</b>(<b>L</b>) to set various run-time values 
+          to other than their defaults with lines of the form<br>
+          <br>
+          metaname = <b>word<br>
+          <br>
+          </b> where each program uses a different set of metanames, although 
+          since they all use the same routine to read the file, lines not used 
+          by a particular program must still be correct. Lines in .<b>backendrc</b> 
+          beginning with &quot;#&quot; are ignored.<br>
+          <br>
+          <b> Backenddaemon</b> then tries to open <b>enf.enf</b> in the same 
+          directory. <b>Enf.enf</b> contains the data and links from all sessions 
+          since it was created. If this file does not exist or has been obviously 
+          corrupted, a new one is created.<br>
+          <br>
+          Connection to Frontend<br>
+          <br>
+          After the data structure initialization, <b>backenddaemon</b> creates 
+          a <b>socket</b>(<b>2</b>) with AF INET address format and SOCK_STREAM 
+          communications semantics. This socket is then bound to either the default 
+          port 55146 or the port given by<br>
+          <br>
+          port = <b>port-number<br>
+          <br>
+          </b> in .<b>backendrc</b>. The socket address is set to INADDR_ANY so 
+          that connections will be accepted from any host in the domain. <b>Backenddaemon</b> 
+          then waits for frontend connections with <b>select</b>(<b>2</b>). It 
+          is up to a frontend or a glue program to attach to the socket with <b>connect</b>(<b>2</b>).<br>
+          <br>
+          After a connection is established, <b>backenddaemon</b> reads a device 
+          name from the socket. This name should be &quot;SOCKET&quot; if frontend 
+          interaction is to be through the socket. <b>Ints</b>(<b>L</b>) uses 
+          this mechanism. Otherwise, <b>backenddaemon</b> will communicate through 
+          the named device; see <b>intx</b>(<b>L</b>) for an example of this method.<br>
+          <br>
+          After the device name is acquired, but before it is used, <b>backenddaemon</b> 
+          expects an x-account request over the socket to establish the initial 
+          account to be used (see Accounts, below).<br>
+          <br>
+          When the account is set, <b>backenddaemon</b> switches to the nonsocket 
+          device if one was specified, otherwise communication continues to the 
+          original socket connection.<br>
+          <br>
+          Metaprotocol<br>
+          <br>
+          Next, <b>backenddaemon</b> conducts a dialog with the frontend to establish 
+          that both parties understand a common protocol. This &quot;metaprotocol&quot; 
+          consists of one or more newline characters (i.e., byte value 0x0a) from 
+          the frontend as synchronization; before the newlines, all input is ignored. 
+          After the newlines, <b>backenddaemon</b> expects to receive the string:<br>
+          <br>
+          P0~<br>
+          <br>
+          (i.e., byte values 0x50 0x30 0x7e). On seeing this, <b>backenddaemon</b> 
+          responds with:<br>
+          <br>
+          \nP0~<br>
+          <br>
+          (0x0a 0x50 0x30 0x7e) meaning that <b>Xanadu</b> <b>FeBe Protocol</b> 
+          <b>88.1x</b> represented by &quot;0&quot; is understood. If <b>backenddaemon</b> 
+          sees any other input after the last newline, it responds with:<br>
+          <br>
+          \nP?~<br>
+          <br>
+          (0x0a 0x50 0x3f 0x7e) meaning that it did not understand the frontend, 
+          and then closes the connection.<br>
+          <br>
+          Interactive Session<br>
+          <br>
+          <b> Backenddaemon</b> is now ready to accept <b>Xanadu FeBe Protocol 
+          88.1x</b> requests. The session lasts until the frontend issues a quit 
+          request. After <b>backenddaemon</b> responds with a quit code the frontend 
+          may exit. After the quit command, <b>Backend</b> closes the connection 
+          that the frontend was using.<br>
+          <br>
+          Accounts<br>
+          <br>
+          See <b>backend</b>(<b>L</b>) for a description of account maintenance.<br>
+          <br>
+          Edit Logging<br>
+          <br>
+          <b> Backenddaemon</b> records all edit requests as <b>backend</b>(<b>L</b>) 
+          does, with the added property that an x-account request is placed in 
+          the log file whenever the requests that may follow are from a different 
+          account than the previous requests.<br>
+          <br>
+          FILES<br>
+          <br>
+          .<b>backendrc</b> - run time switches<br>
+          <br>
+          <b> backenderror</b> - redirected stderr<br>
+          <br>
+          <b> enf.enf</b> - the magic data structure file<br>
+          <br>
+          <b> ln</b>?.?.?:? - the edit log file<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          backend(L), fex(L), ints(L), intx(L), xlog(L), accept(2), bind(2), socket(2)<br>
+          <br>
+          <b> Xanadu FeBe Protocol 88.1x Documentation</b>, Xanadu Operating Company, 
+          August 1988<br>
+          <br>
+          BUGS<br>
+          <br>
+          In .<b>backendrc</b>, whitespace is required on both sides of the &quot;=&quot; 
+          on each line.<br>
+          <br>
+          When given a device name other than &quot;SOCKET,&quot; <b>daemon</b> 
+          does not read lines that are not terminated with a newline.<br>
+          <br>
+          See <b>backend</b>(<b>L</b>) for more bugs.<br>
+          <br>
+          NOTES<br>
+          <br>
+          Since the data structure is easy to corrupt with invalid but unchecked 
+          requests, it is a good idea to occasionally copy <b>enf.enf</b> to a 
+          backup file.<br>
+          <br>
+          The limit of 5 frontend connections is an arbitrary one, and does not 
+          reflect any limitations in the internal structure of the backend. The 
+          <b>socket</b>(<b>2</b>) facility was chosen because it was simple enough 
+          to not distract from the development of the more intricate Xanadu hypertext 
+          functionality (i.e., it was a quick hack).<br>
+          <br>
+          &nbsp; </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      FEX(L) LOCAL COMMANDS FEX(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> fex</b> - experimental Xanadu™ frontend<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          fex <b>pipe-from-backend pipe-to-backend<br>
+          <br>
+          </b> INVOCATION<br>
+          <br>
+          <b> fex</b> is normally invoked by a &quot;glue&quot; program such as 
+          <b>intf</b> that starts both the frontend and the backend and sets up 
+          the pipes to allow them to communicate.<br>
+          <br>
+          DESCRIPTION<br>
+          <br>
+          <b> fex</b> is a screen-oriented program resembling a visual text editor 
+          which provides a user interface to the Xanadu backend <b>backend</b>(<b>L</b>). 
+          There is no explicit insert mode: alphanumeric characters typed at any 
+          time are inserted into the text under the cursor position. The DEL key 
+          is used to delete characters before the cursor position.<br>
+          <br>
+          When <b>fex</b> is invoked it automatically locates and places on the 
+          screen a document (1.1.0.1.0.1) that serves as an entry point to the 
+          system. This document contains a summary of frontend commands and a 
+          link connecting it to another document that serves as a general index. 
+          Additional commands are invoked through a pop-up menu.<br>
+          <br>
+          TERMINOLOGY 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> <b> end-set</b> A region of text (possibly discontinuous 
+                    and possibly spanning more than one document) connected to 
+                    another such region by a link.<br>
+                    <br>
+                    <b> link</b> A connection between two end-sets, modified by 
+                    a third end-set. These are respectively called the <b>from-set</b>, 
+                    <b>to-set</b>, and <b>three-set</b>, of the link. <b>From-sets</b> 
+                    are displayed as back-lit; <b>to-sets</b> as underlined (termcap 
+                    permitting) or as back-lit. <b>Three-sets</b> are used to 
+                    describe the intended meaning of the link, such as if it is 
+                    a jump link or a footnote link. The distinction between from-sets 
+                    and to-sets reflects the link author’s intentions rather than 
+                    any functional difference. The from-sets and to-sets of a 
+                    link are really symmetrical.<br>
+                    <br>
+                    <b> cut</b> A temporary mark made in the text to specify boundaries 
+                    of an end-set for a link to be created, or a section to be 
+                    rearranged or deleted.<br>
+                    <br>
+                    <b> display style</b> When a link is followed, the text at 
+                    the destination is displayed in a window that can be a quarter-screen 
+                    (default), a horizontal half-screen, a vertical half-screen, 
+                    or an entire screen. The display style can be changed through 
+                    the menu (see below). If a window was created by following 
+                    a link, its display style is initially determined by the three-set 
+                    of that link.<br>
+                    <br>
+                    &nbsp;<br>
+                    <br>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          COMMANDS<br>
+          <br>
+          <b> cursor control</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^W or up arrow Move cursor up<br>
+                      <br>
+                      ^Z or down arrow Move cursor down<br>
+                      <br>
+                      ^A or left arrow Move cursor left<br>
+                      <br>
+                      ^S or right arrow Move cursor right<br>
+                      <br>
+                      ^Q Top of document<br>
+                      <br>
+                      ^F Down one page<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          <b> menu</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^N Show menu: current selection is back-lit. Up and 
+                      down cursor controls change current selection and SPACE 
+                      BAR executes it. Available menu selections are listed under 
+                      MENU OPTIONS below.<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          <b> link following</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^Y Follow the link indicated by the cursor. If the cursor 
+                      position is occupied by multiple, overlapping end-sets, 
+                      the first lines of each destination will be displayed in 
+                      a menu. When the link is selected the destination text will 
+                      appear in a new window whose size and position is determined 
+                      by the <b>display style</b>.<br>
+                      <br>
+                      ^U Return from link: the first lines of the windows to which 
+                      a return is possible are displayed in a menu.<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          <b> text editing</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^G Make cut. (For deletions see <b>MENU OPTIONS</b> 
+                      )<br>
+                      <br>
+                      ^P Delete block<br>
+                      <br>
+                      ^C Rearrange<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          <b> link creation</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^V Change from-set: text delimited by cuts is added 
+                      to a temporary from-set; then the cuts are cleared.<br>
+                      <br>
+                      ^B Change to-set: text delimited by cuts is added to a temporary 
+                      to-set; then the cuts are cleared.<br>
+                      <br>
+                      ^L Make link: a menu appears asking if the link is to be 
+                      a jump, quote, footnote, or marginal note. An appropriately 
+                      typed link is then created between the temporary from-set 
+                      and the temporary to-set; then the temporary end-sets are 
+                      cleared.<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          <b> miscellaneous</b> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> ^] Redraw screen<br>
+                      <br>
+                      ^T Exit program<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          MENU OPTIONS 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> set display style Select a <b>display style</b>, as 
+                      defined above<br>
+                      <br>
+                      show key definitions (unimplemented)<br>
+                      <br>
+                      compare Show corresponding portions of two documents<br>
+                      <br>
+                      follow link = ^Y<br>
+                      <br>
+                      create link = ^L<br>
+                      <br>
+                      make cut = ^G<br>
+                      <br>
+                      delete cuts Clear all cuts<br>
+                      <br>
+                      delete block = ^P<br>
+                      <br>
+                      rearrange = ^C<br>
+                      <br>
+                      create document Create a new, empty document. NOTE: a link 
+                      to the new document must be made before leaving the document 
+                      or the frontend will be unable to retrieve the document 
+                      even though it still exists.<br>
+                      <br>
+                      change from-set = ^V<br>
+                      <br>
+                      change to-set = ^B<br>
+                      <br>
+                      clearendsets Remove all temporary end-sets created by the 
+                      previous two commands.<br>
+                      <br>
+                      create version Duplicate the current document as a new version. 
+                      NOTE: a link to the new document must be made before leaving 
+                      the document or the frontend will be unable to retrieve 
+                      the document even though it still exists.<br>
+                      <br>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+          BUGS<br>
+          <br>
+          This is an experimental frontend. The following bugs are known to exist. 
+          There are undoubtedly others. 
+          <dir> 
+            <dir> 1. Hitting DELETE with the cursor in the first position of a 
+              window causes a fatal error.<br>
+              <br>
+              2. Text cannot be inserted below the last line of a document. Attempts 
+              to do so cause a fatal error. To append text to a document, place 
+              the cursor at the end of the last line and hit RETURN. Blank lines 
+              may be appended with repeated RETURNs.<br>
+              <br>
+              3. Deletion of text in a newly-created document (i.e., one created 
+              in the current invocation of <b>fex</b>) may result in a mispositioning 
+              of the cursor. The actual document <b>should</b> be edited correctly. 
+              However, it is recommended that editing of newly-created documents 
+              be kept to a minimum. </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      INTF(L) LOCAL COMMANDS INTF(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> intf</b> - connect a frontend to the single-user Xanadu™ 88.1x backend<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          intf <b>backend frontend<br>
+          <br>
+          </b> DESCRIPTION<br>
+          <br>
+          <b> Intf</b> uses the <b>pipe</b>(<b>2</b>) facility to connect a frontend 
+          program to the standard I/O of a program such as <b>backend</b>(<b>L</b>).<br>
+          <br>
+          Two pipes are created by <b>intf</b>, one from the frontend to the backend, 
+          the other in the opposite direction. One end of each pipe is attached 
+          to <b>stdin</b> and <b>stdout</b>. <b>Intf</b> then forks and executes 
+          the backend program with these pipes as its standard I/O. The original 
+          branch of the fork then executes the frontend program with the file 
+          descriptor numbers for the other ends of the pipes passed as command 
+          line arguments in the form<br>
+          <br>
+          frontend <b>pipe-from-backend pipe-to-backend<br>
+          <br>
+          </b> so that the frontend can communicate with the backend through them. 
+          <b>Intf</b> does not exit if successful, turning into the frontend instead.<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          backend(L), frontend(L), execl(2), fork(2), pipe(2) </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      INTS(L) LOCAL COMMANDS INTS(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> ints</b> - connect a frontend to a Xanadu™ backend daemon<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          ints <b>frontend account<br>
+          <br>
+          </b> DESCRIPTION<br>
+          <br>
+          <b> Ints</b> uses the <b>socket</b>(<b>2</b>) facility to connect a 
+          frontend program to <b>daemon</b>(<b>L</b>).<br>
+          <br>
+          <b> Ints</b> first reads the file .<b>backendrc</b> in the current directory. 
+          If the line<br>
+          <br>
+          backenddir = <b>path<br>
+          <br>
+          </b> is present, <b>ints</b> sets <b>path</b> as its working directory, 
+          otherwise the directory is unchanged.<br>
+          <br>
+          Next, <b>ints</b> acquires a socket with AF_INET address format and 
+          SOCK_STREAM semantics-the same form as <b>daemon</b>(<b>L</b>). <b>Ints</b> 
+          then binds the socket to a specific port and host. The default port 
+          is 55146 and the default host is localhost, although these can be changed 
+          in .<b>backendrc</b> with<br>
+          <br>
+          port = <b>port-number<br>
+          <br>
+          </b> and<br>
+          <br>
+          host = <b>host-name<br>
+          <br>
+          Connect</b>(<b>2</b>) is then called with this binding. If the connection 
+          is not made, <b>ints</b> spawns a daemon on the local host machine with 
+          <b>fork</b>(<b>2</b>) and <b>execl</b>(<b>2</b>). The default daemon 
+          is <b>backenddaemon</b> in the directory set above, but this may be 
+          changed with<br>
+          <br>
+          backend = <b>daemon-name<br>
+          <br>
+          </b> in .<b>backendrc</b>. <b>Ints</b> then makes a second attempt to 
+          connect after a 15 second wait. A second failure results in termination.<br>
+          <br>
+          Once the connection is acquired, <b>ints</b> sends the string &quot;SOCKET&quot; 
+          to <b>daemon</b> to indicate that the socket connection will be used 
+          by the frontend. <b>Ints</b> then sends an x-account request to <b>daemon</b> 
+          with the account number from the command line.<br>
+          <br>
+          Finally, <b>ints</b> executes the frontend program. The default frontend 
+          is <b>fex</b> in the directory set above, but may be changed with<br>
+          <br>
+          frontend = <b>frontend-name<br>
+          <br>
+          </b> in .<b>backendrc</b>. The file descriptor numbers for the socket 
+          are passed as command line arguments in the form<br>
+          <br>
+          frontend <b>from-backend to-backend<br>
+          <br>
+          </b> so that the frontend can communicate with the backend through them. 
+          <b>Ints</b> does not exit if it is successful.<br>
+          <br>
+          FILES<br>
+          <br>
+          .<b>backendrc</b> - run time switches<br>
+          <br>
+          <b> backenddaemon</b> - Xanadu backend daemon program<br>
+          <br>
+          <b> fex</b> - frontend program<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          daemon(L), fex(L), bind(2), connect(2), socket(2)<br>
+          <br>
+          <b> Xanadu FeBe Protocol 88.1x Documentation</b>, Xanadu Operating Company, 
+          August 1988<br>
+          <br>
+          BUGS<br>
+          <br>
+          If you are trying to connect to a backend daemon on another machine, 
+          it will not help for <b>ints</b> to spawn one on the local machine, 
+          as the second connection attempt will still fail. </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      </font>&nbsp;<br>
+      <br>
+      <font size=2>INTX(L) LOCAL COMMANDS INTX(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> intx</b> - connect a Xanadu™ backend daemon to a terminal<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          intx <b>backend account<br>
+          <br>
+          </b> DESCRIPTION<br>
+          <br>
+          <b> Intx</b> is almost identical to <b>ints</b>(<b>L</b>). Instead of 
+          connecting to a frontend via a socket, however, <b>intx</b> connects 
+          the backend to the terminal that is attached to <b>stdin</b>. The purpose 
+          of this is to allow a frontend program running on a different machine 
+          connected to a network host via a serial line to connect to a Xanadu 
+          backend.<br>
+          <br>
+          FILES<br>
+          <br>
+          .<b>backendrc</b> - run time switches<br>
+          <br>
+          <b> backenddaemon</b> - Xanadu backend daemon program<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          daemon(L), xlog(L), connect(2), socket(2), ttyname(3)<br>
+          <br>
+          BUGS<br>
+          <br>
+          Presently requests to the backend are line buffered with <b>intx</b>. 
+        </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      XLOG(L) LOCAL COMMANDS XLOG(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> xlog</b> - entry point for experimental multiple user Xanadu™ hypertext 
+          system<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          xlog [ <b>user-name</b> ]<br>
+          <br>
+          DESCRIPTION<br>
+          <br>
+          <b> Xlog</b> attempts to find a Xanadu account number based on a user 
+          name, if any, and then invokes either <b>ints</b>(<b>L</b>) or <b>intx</b>(<b>L</b>) 
+          with that account number. If no user name is given, account 1.1.0.1 
+          is used.<br>
+          <br>
+          <b> Xlog</b> first reads .<b>backendrc</b> in the current directory. 
+          If the line<br>
+          <br>
+          backenddir = <b>path<br>
+          <br>
+          </b> is present, <b>xlog</b> sets <b>path</b> as its working directory, 
+          otherwise the directory is unchanged. <b>Xlog</b> then prompts for a 
+          password (which is not checked), and looks for the account number for 
+          <b>user-name</b> in either <b>accountfile</b> in the directory set above, 
+          or in the file named by<br>
+          <br>
+          accountfile = <b>file-name<br>
+          <br>
+          </b> in .<b>backendrc</b>. This file contains lines with the format<br>
+          <br>
+          user-name:password:account-number<br>
+          <br>
+          for example,<br>
+          <br>
+          albert:space-time:1.42.0.23<br>
+          <br>
+          <b> Xlog</b> then asks if you want to run the standard frontend (through 
+          <b>ints</b>(<b>L</b>)) or one running on a different machine (connected 
+          via <b>intx</b>(<b>L</b>)). The appropriate program is then executed, 
+          and <b>xlog</b> vanishes.<br>
+          <br>
+          FILES<br>
+          <br>
+          <b> accountfile</b> - file to map from user names to account numbers<br>
+          <br>
+          .<b>backendrc</b> - run time switches<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          daemon(L), fex(L), ints(L), intx(L), execl(2)<br>
+          <br>
+          BUGS<br>
+          <br>
+          If the directory is changed by .<b>backendrc</b>, <b>ints</b>, <b>intx</b>, 
+          and <b>daemon</b> will start with that directory, and attempt to read 
+          .<b>backendrc</b> from there. For now, just keep a copy wherever it 
+          may be used. </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988<br>
+      <br>
+      &nbsp;<br>
+      <br>
+      XUMAIN(L) LOCAL COMMANDS XUMAIN(L)<br>
+      <br>
+      </font>&nbsp; 
+      <dir> 
+        <dir> NAME<br>
+          <br>
+          <b> xumain</b> - interactive stand alone Xanadu™ backend with awful 
+          numerical interface<br>
+          <br>
+          SYNOPSIS<br>
+          <br>
+          xumain [ &lt; <b>setup-script</b> ]<br>
+          <br>
+          DESCRIPTION<br>
+          <br>
+          <b> Xumain</b> is a quasi-interactive stand alone version of <b>backend</b>(<b>L</b>), 
+          which does not use the <b>Xanadu FeBe Protocol 88.1x</b> syntax, instead 
+          prompting for input to most requests. <b>Xumain</b> does, however, have 
+          enough similarities to <b>Xanadu FeBe Protocol 88.1x</b> for the protocol 
+          document to be a useful reference.<br>
+          <br>
+          <b> Xumain</b> is the original Xanadu backend, written before any frontend, 
+          and was intentionally left as a user-hostile program to encourage us 
+          to really write a frontend. The program continues to exist principally 
+          as a tool to create Xanadu documents from text files using the source-unix-command 
+          command, which should really be a function of some<br>
+          <br>
+          frontend.<br>
+          <br>
+          Spec-sets<br>
+          <br>
+          Spec-sets, spans, and v-spans are handled differently by <b>xumain</b>, 
+          with prompts for yes/no responses to determine which type to use; some 
+          of the prompts are context dependent. Tumblers are also different: <b>xumain</b> 
+          requires that the leading zeros of a tumbler are explicitly given, rather 
+          than with an exponent. All the prompts below that end with &quot;=&gt;&quot; 
+          require a tumbler according to the <b>Xanadu FeBe Protocol 88.1x</b>. 
+          When a spec set is expected the user is prompted with<br>
+          <br>
+          any spans or vspecs? (y/n)<br>
+          <br>
+          where span has its usual meaning and vspec is a document number with 
+          a set of v-spans. The spec set is terminated with a negative response 
+          to this prompt. A positive response is followed by the prompt<br>
+          <br>
+          a span? (y/n)<br>
+          <br>
+          This is asking whether you want a span or a collection of v-spans within 
+          a document. A ‘yes’ answer elicits a prompt for a span:<br>
+          <br>
+          enter span<br>
+          <br>
+          start=&gt;<br>
+          <br>
+          width=&gt;<br>
+          <br>
+          If you respond with ‘no’, then you will be prompted for a document number 
+          with<br>
+          <br>
+          document=&gt;<br>
+          <br>
+          and then for a v-span set with<br>
+          <br>
+          any spans? (y/n)<br>
+          <br>
+          except that this time, the span in question is a v-span. V-spans are 
+          requested until a ‘no’ answer, after which you will be prompted for 
+          the next spec.<br>
+          <br>
+          As an example consider this request to retrieve the first 10 characters 
+          from the document 1.1.0.1. (The emphasized text is the user's response.): 
+          <dir> 
+            <dir> request? <b>5<br>
+              <br>
+              </b> any spans or vspecs? (y/n) <b>y<br>
+              <br>
+              </b> a span? (y/n) <b>n<br>
+              <br>
+              </b> document=&gt; <b>1.1.0.1<br>
+              <br>
+              </b> any spans? (y/n) <b>y<br>
+              <br>
+              </b> enter span<br>
+              <br>
+              start=&gt; <b>1.1<br>
+              <br>
+              </b> width=&gt; <b>0.10<br>
+              <br>
+              </b> any spans? (y/n) <b>n<br>
+              <br>
+              </b> any spans of vspecs? (y/n) <b>n<br>
+              <br>
+              </b> </dir>
+          </dir>
+          Assuming they are present, <b>xumain</b> will then respond with those 
+          10 characters.<br>
+          <br>
+          Commands<br>
+          <br>
+          There are four commands, x-account, create-node-or-account, open, and 
+          close which do not prompt for their arguments. All these, however, accept 
+          the same arguments as <b>Xanadu FeBe Protocol 88.1x</b>, but separated 
+          by newlines rather than the <b>Xanadu FeBe Protocol 88.1x</b> word delimiter 
+          character.<br>
+          <br>
+          The insert request in <b>xumain</b> has an important difference from 
+          <b>Xanadu FeBe Protocol 88.1x.</b> Rather than giving a count of the 
+          number of characters in the text item, the input text is terminated 
+          with a blank line.<br>
+          <br>
+          There is a request unique to <b>xumain</b> called source-unix-command, 
+          which is request number 21. This asks for a command for execution by 
+          <b>sh</b>(<b>1</b>) with the standard output directed to a file with 
+          the name &quot;xum&quot; followed by <b>xumain’s</b> process number. 
+          A new document is created and the command output is placed there. The 
+          new document number is printed for future use. Finally, the output file 
+          is deleted.<br>
+          <br>
+          FILES<br>
+          <br>
+          <b> enf.enf</b> - the magic data structure file.<br>
+          <br>
+          <b> xum</b>??? - command output for source-unix-command<br>
+          <br>
+          SEE ALSO<br>
+          <br>
+          backend(L), sh(1)<br>
+          <br>
+          <b> Xanadu FeBe Protocol 88.1x Documentation</b>, Xanadu Operating Company, 
+          August 1988<br>
+          <br>
+          BUGS<br>
+          <br>
+          See <b>backend</b>(<b>L</b>).<br>
+          <br>
+          NOTE<br>
+          <br>
+          Since the data structure is easy to corrupt with invalid but unchecked 
+          requests, it is a good idea to occasionally copy <b>enf.enf</b> to a 
+          backup file.<br>
+          <br>
+          <b> Xumain</b> will not appear in future releases. </dir>
+      </dir>
+      <font size=2>Last change: 25 August 1988 </font><font face="Courier, Courier" size=1> 
+      </font> 
+      <P ALIGN="left">&nbsp;
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

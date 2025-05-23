@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Fe vs. Be</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>Fe 
+              <i>vs.</i> Be</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> <font size=6> </font><font size=4><b> 
+      Introduction<br>
+      <br>
+      </b></font>The frontend/backend distinction has several aspects: why is 
+      there a distinction, how was the distinction made, and what is the distinction?<br>
+      <br>
+      The frontend and backend separation supports multiple users and single users 
+      with multiple applications. Supporting multiple users requires either that 
+      they all communicate with the same hypertext engine (the backend) or that 
+      they exercise some system dependent database locking scheme. Neither the 
+      system dependence nor the clumsiness of locking schemes were acceptable. 
+      Even the single user will require multiple applications. Imagine creating 
+      pictures with one frontend, while annotating the pictures with textual descriptions 
+      and background music, all in the same document! No single frontend can cope 
+      with all the possibilities of multi-media.<br>
+      <br>
+      In terms of clients and servers, the backend is a hypertext server and the 
+      frontends are clients. This emphasizes the anonymity of the frontends to 
+      the backend. We use the term &quot;frontend&quot; rather than &quot;client&quot; 
+      to stress the user interaction and data generation supplied by frontends.<br>
+      <br>
+      <font size=4><b>Separation of Functionality<br>
+      <br>
+      </b></font>The separation between the frontend and backend allows them to 
+      run on the same or different machines. Thus, low-end computers can use the 
+      full power of the Xanadu backend over a network. More powerful computers 
+      can run both frontend and backend concurrently.<br>
+      <br>
+      The backend supports as much generality as possible, with as few concepts 
+      as possible. For example, because the backend avoids all operations that 
+      interpret the stored data, it can store and interconnect <i>any</i> kind 
+      of data, from text to PostScript, RenderMan protocol to digital video.<br>
+      <br>
+      The backend avoids all operations that can be done equally well outside 
+      of the backend. Searching operations are an example. The special retrieval 
+      operations in the backend which seem like searching operations actually 
+      derive their results from the proprietary data-structures, without searching. 
+      Since the FeBe Protocol follows a remote procedure call style, a frontend 
+      and backend on the same machine can easily transfer massive amounts of data. 
+      With the addition of application specific knowledge, frontends can search 
+      faster than the backend possibly could.<br>
+      <br>
+      <font size=4><b>Avoiding Premature Rules<br>
+      <br>
+      </b></font>Finally, the backend encourages the evolution of conventions, 
+      rather than entrenching premature rules. Link types, for example are quite 
+      general. Most existing hypertext type systems declare a fixed set of link 
+      types. The Xanadu system does not even specify the nature of a link type, 
+      let alone the specific set of possible types. No solution by fiat could 
+      possibly cope with the newly available and continually evolving media, market 
+      needs, etc. The current list of areas for evolution are: 
+      <dir> </dir>
+                <dir> 
+        <dir> 
+          <dir> 
+            <dir> • frontend interaction conventions – what metaphors will present 
+              a document most intuitively?<br>
+              <br>
+              • the nature of link types – will they be constants, pieces of code, 
+              etc.?<br>
+              <br>
+              • specific link types – quote, reference, retraction, refutation?<br>
+              <br>
+              • document topologies – how will documents typically be structured? 
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=4><b>Where Do We Go From Here?<br>
+      <br>
+      </b></font>The chapter &quot;Technical Overview&quot; discusses the concepts 
+      implemented by the backend. Only operations to support versions, links, 
+      multi-user access, and comparison are included in the backend. The current 
+      facilities will evolve, both in capability and in generality. Below is a 
+      partial list of planned extensions. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • generalized data-space: two, three, and n dimensional<br>
+              <br>
+              • time, timestamps, etc in the versions system<br>
+              <br>
+              • editable links<br>
+              <br>
+              • sophisticated access control<br>
+              <br>
+              • historical trace documents which contain the edit and version 
+              history of other documents<br>
+              <br>
+              • mechanism for charging royalties for access to links or documents. 
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      This list will rapidly grow as we receive customer suggestions. 
+      <P ALIGN="left">&nbsp;
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

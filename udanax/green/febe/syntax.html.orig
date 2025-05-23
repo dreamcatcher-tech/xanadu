@@ -1,0 +1,997 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Appendix A - FeBe Protocol Syntax</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B><font size="5">Appendix 
+              A<br>
+              </font>FeBe Protocol Syntax</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> <font size=6> </font><font size=5><b>Metasyntax<br>
+      <br>
+      </b></font>This document specifies the FeBe Protocol in an extended Backus 
+      – Naur Form (BNF) strongly influenced by <font size=2>[Harbison&amp;Steele 
+      84]</font>.<br>
+      <br>
+      Terminal symbols are printed using a <font face="Courier, Courier">fixed</font> 
+      typeface, while non-terminal symbols are written in <i>cursive</i> style. 
+      All terminal symbols refers to ASCII characters to be sent exactly as defined 
+      within the open and close quotes (‘ ’).<br>
+      <br>
+      All non-terminal symbols are defined by a production. The vertical bar (|) 
+      designates an exclusive-or choice between options. The production: 
+      <dir> </dir>
+                    <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> non-terminal</i> ::= ‘</font><font face="Courier, Courier" size=2>terminal</font>’ 
+                            | <i>also-non-terminal</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      defines the symbol <i>non-terminal</i> as either the terminal symbol <font face="Courier, Courier">terminal</font> 
+      or the non-terminal symbol <i>also-non-terminal</i>. The symbol ‘|’ has 
+      lower precedence than all operators except ‘::=’ and ‘<font face="Symbol">Þ</font>’.<br>
+      <br>
+      <font size=4><b>Sequences<br>
+      <br>
+      </b></font>The brackets ‘[’ and ‘]’ are used as meta-syntactical symbols 
+      to designate optional and/or repeating sequences. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> [ <i>symbol</i> ]? zero or one occurrence 
+                            of <i>symbol<br>
+                            <br>
+                            </i> [ <i>symbol </i>]* zero or more occurrences of 
+                            <i>symbol<br>
+                            <br>
+                            </i> [ <i>symbol</i> ]+ one or more occurrences of 
+                            <i>symbol</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      The FeBe Protocol also uses a sequence construct difficult to model in BNF: 
+      a count delimited sequence. We introduce an extension to the syntax: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> count</i> • [ <i>element</i> 
+                            ]</font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      to designate the number <i>count</i> followed by <i>count</i> repetitions 
+      of <i>element.<br>
+      <br>
+      </i><font size=4><b>Calls<br>
+      <br>
+      </b></font>The arrow ‘<font face="Symbol">Þ</font>’ specifies a protocol 
+      call: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> call </font></i><font face="Symbol" size=2>Þ</font> 
+                            <i>result</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Although this looks like a production it is in reality an action. The above 
+      example is a call from Fe (<i>call</i>) with a reply from the Be (<i>result</i>) 
+      or possibly an error (<i>error</i>).<br>
+      <br>
+      <div align="center"><b><font size=5> &nbsp;<br>
+        <br>
+        Lexical Definitions<br>
+        <br>
+        </font></b></div>
+      <b><font size=2> Special Characters</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> newline</i> ::= This is the 
+                            character 12</font><font size=1>8</font><font size=2> 
+                            or A</font><font size=1>16</font><font size=2> often 
+                            represented as </font><font face="Courier, Courier" size=2>'\n'</font> 
+                            in C.<br>
+                            <br>
+                            <i> delim</i> ::= ‘<font face="Courier, Courier" size=2>~</font>’ 
+                            | <i>newline<br>
+                            <br>
+                            digit</i> ::= ‘<font face="Courier, Courier" size=2>0</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>1</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>2</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>3</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>4</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>5</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>6</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>7</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>8</font>’ 
+                            | ‘<font face="Courier, Courier" size=2>9</font>’<br>
+                            <br>
+                            <i> char</i> ::= Any 8 bit ASCII character </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>Errors</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> error</i> ::= ‘<font face="Courier, Courier" size=2>?</font>’ 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>Tumblers</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> number</i> ::= [ <i>digit</i> ]+ <i>delim<br>
+                            <br>
+                            exponent</i> ::= [ <i>digit</i> ]+<br>
+                            <br>
+                            <i> tumbler</i> ::= exponent [ ‘<font face="Courier, Courier" size=2>.</font>’ 
+                            [ <i>digit</i> ]+ ]* <i>delim<br>
+                            <br>
+                            id</i> ::= <i>tumbler<br>
+                            <br>
+                            vaddr</i> ::= <i>exponent</i> ‘<font face="Courier, Courier" size=2>.</font>’ 
+                            [ <i>digit</i> ]+ [ ‘<font face="Courier, Courier" size=2>.</font>’ 
+                            [ <i>digit</i> ]+ ]? <i>delim</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>Groups</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> span</i> ::= <i>tumbler<font size=1>start 
+                            </font><font size=2>tumbler</font><font size=1>width<br>
+                            <br>
+                            </font><font size=2> vspan</font></i><font size=2> 
+                            ::= <i>vaddr</i></font><i><font size=1>start </font><font size=2>vaddr</font><font size=1>width<br>
+                            <br>
+                            </font><font size=2> spec</font></i><font size=2> 
+                            ::= ‘</font><font face="Courier, Courier" size=2>s</font>’ 
+                            <i>delim span<br>
+                            <br>
+                            </i> | ‘<font face="Courier, Courier" size=2>v</font>’ 
+                            <i>delim doc-id number</i> • [ <i>vspan </i>]<br>
+                            <br>
+                            <i> spec-set</i> ::= <i>number</i> • [ <i>spec</i> 
+                            ]<br>
+                            <br>
+                            <i> shared-span</i> ::= <i>tumbler<font size=1>start-1</font><font size=2> 
+                            tumbler</font><font size=1>start -2</font><font size=2> 
+                            tumbler</font><font size=1>width<br>
+                            <br>
+                            </font></i><font size=2> &nbsp; </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>Document contents</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> string</i> ::= ‘</font><font face="Courier, Courier" size=2>t</font>’ 
+                            <i>number</i> • [ <i>char</i> ]<br>
+                            <br>
+                            <i> contents</i> ::= <i>string</i> | <i>id<font size=1>link</font></i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>Command codes</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> <font size=2> <i> create-new-document</i> ::= ‘</font><font face="Courier, Courier" size=2>11</font>’ 
+                          <i>delim<br>
+                          <br>
+                          create-new-version</i> ::= ‘<font face="Courier, Courier" size=2>13</font>’ 
+                          <i>delim<br>
+                          <br>
+                          open</i> ::= ‘<font face="Courier, Courier" size=2>35</font>’ 
+                          <i>delim<br>
+                          <br>
+                          close</i> ::= ‘<font face="Courier, Courier" size=2>36</font>’ 
+                          <i>delim<br>
+                          <br>
+                          create-link</i> ::= ‘<font face="Courier, Courier" size=2>27</font>’ 
+                          <i>delim<br>
+                          <br>
+                          retrieve-doc-vspan</i> ::= ‘<font face="Courier, Courier" size=2>14</font>’ 
+                          <i>delim<br>
+                          <br>
+                          retrieve-doc-vspanset</i> ::= ‘<font face="Courier, Courier" size=2>1</font>’ 
+                          <i>delim<br>
+                          <br>
+                          retrieve-v</i> ::= ‘<font face="Courier, Courier" size=2>5</font>’ 
+                          <i>delim<br>
+                          <br>
+                          follow-link</i> ::= ‘<font face="Courier, Courier" size=2>18</font>’ 
+                          <i>delim<br>
+                          <br>
+                          retrieve-endsets</i> ::= ‘<font face="Courier, Courier" size=2>28</font>’ 
+                          <i>delim<br>
+                          <br>
+                          find-links-from-to-three</i> ::= ‘<font face="Courier, Courier" size=2>30</font>’ 
+                          <i>delim<br>
+                          <br>
+                          show-relations-of-2-versions</i> ::= ‘<font face="Courier, Courier" size=2>10</font>’ 
+                          <i>delim<br>
+                          <br>
+                          find-docs-containing </i>::= ‘<font face="Courier, Courier" size=2>22</font>’ 
+                          <i>delim<br>
+                          <br>
+                          insert</i> ::= ‘<font face="Courier, Courier" size=2>0</font>’ 
+                          <i>delim<br>
+                          <br>
+                          copy</i> ::= ‘<font face="Courier, Courier" size=2>2</font>’ 
+                          <i>delim<br>
+                          <br>
+                          rearrange</i> ::= ‘<font face="Courier, Courier" size=2>3</font>’ 
+                          <i>delim<br>
+                          <br>
+                          delete-vspan</i> ::= ‘<font face="Courier, Courier" size=2>12</font>’ 
+                          <i>delim<br>
+                          <br>
+                          quit</i> ::= ‘<font face="Courier, Courier" size=2>16</font>’ 
+                          <i>delim<br>
+                          <br>
+                          x-account</i> ::= ‘<font face="Courier, Courier" size=2>34</font>’ 
+                          <i>delim<br>
+                          <br>
+                          create-node-or-account</i> ::= ‘<font face="Courier, Courier" size=2>38</font>’ 
+                          <i>delim<br>
+                          <br>
+                          </i><font size=5><b> &nbsp; </b></font></dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=5><b>Requests<br>
+      <br>
+      </b></font><b><font size=2> create-new-document 11</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> create-new-document</i> </font><font face="Symbol" size=2>Þ 
+                            </font><i>create-new-document id<font size=1>doc</font></i><font size=2>| 
+                            <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>create-new-version 13</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> create-new-version id</font></i><i><font size=1>old-doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>create-new-version 
+                            id<font size=1>new-doc</font></i><font size=2>| <i>error</i> 
+                            </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>open 35</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> mode</i> ::= ‘</font><font face="Courier, Courier" size=2>1</font>’<font size=1><i>read-only 
+                            </i></font><i><font size=2>delim </font></i><font size=2>| 
+                            ‘</font><font face="Courier, Courier" size=2>2</font>’<font size=1><i>read-write 
+                            </i></font><i><font size=2>delim<br>
+                            <br>
+                            copy-switch</font></i><font size=2> ::= ‘</font><font face="Courier, Courier" size=2>1</font>’<font size=1><i>fail-on-conflict 
+                            </i></font><i><font size=2>delim </font></i><font size=2>| 
+                            ‘</font><font face="Courier, Courier" size=2>2</font>’<font size=1><i>copy-on-conflict</i></font><font size=2> 
+                            <i>delim</i> | ‘</font><font face="Courier, Courier" size=2>3</font>’<font size=1><i>always-copy<br>
+                            <br>
+                            </i></font><i><font size=2> open id</font><font size=1>doc</font></i><font size=2> 
+                            <i>mode copy-switch</i> </font><font face="Symbol" size=2>Þ</font> 
+                            <i>open id<font size=1>new-doc </font></i><font size=2>| 
+                            <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>close 36</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> close id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>close</i> 
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>create-link 27</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> create-link id<font size=1>doc</font></i><font size=2> 
+                            <i>spec-set</i></font><i><font size=1>from</font><font size=2> 
+                            spec-set</font><font size=1>to</font><font size=2> 
+                            spec-set</font><font size=1>three<br>
+                            <br>
+                            </font></i><font face="Symbol" size=2> Þ</font> <i>create-link 
+                            id<font size=1>link</font></i><font size=2> | <i>error</i> 
+                            </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>retrieve-doc-vspan 14</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> retrieve-doc-vspan id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>retrieve-doc-vspan 
+                            vspan</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>retrieve-doc-vspanset 1</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> retrieve-doc-vspanset id<font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>retrieve-doc-vspanset 
+                            number</i> • [ <i>vspan</i> ]<br>
+                            <br>
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>retrieve-v 5</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> retrieve-v spec-set</i> <font face="Symbol" size=2>Þ</font> 
+                            <i>retrieve-v number</i> • [ <i>contents</i> ] | <i>error</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>follow-link 18</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> end-switch</i> ::= ‘<font face="Courier, Courier" size=2>1</font>’<font size=1><i>from</i></font><font size=2> 
+                            <i>delim </i>| ‘</font><font face="Courier, Courier" size=2>2</font>’<font size=1><i>to 
+                            </i></font><i><font size=2>delim </font></i><font size=2>| 
+                            ‘</font><font face="Courier, Courier" size=2>3</font>’<font size=1><i>three 
+                            </i></font><i><font size=2>delim<br>
+                            <br>
+                            follow-link end-switch id</font><font size=1>link</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>follow-link 
+                            spec-set<font size=1>end</font></i><font size=2> | 
+                            <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>retrieve-endsets 28</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> retrieve-endsets spec-set</font></i><i><font size=1>contents</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>retrieve-endsets 
+                            spec-set<font size=1>from </font><font size=2>spec-set</font><font size=1>to<br>
+                            <br>
+                            </font><font size=2> spec-set</font><font size=1>three 
+                            </font></i><font size=2>| <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>find-links-from-to-three 30</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> home-spec</i> ::= <i>number</i> 
+                            • [ <i>id</i></font><i><font size=1>doc</font></i><font size=2>]<br>
+                            <br>
+                            <i> find-links-from-to-three spec-set</i></font><i><font size=1>from 
+                            </font><font size=2>spec-set</font><font size=1>to</font></i><font size=2> 
+                            <i>spec-set</i></font><i><font size=1>three </font><font size=2>home-spec</font></i> 
+                            <font face="Symbol" size=2>Þ<br>
+                            <br>
+                            </font><i> find-links-from-to-three number</i> • [ 
+                            <i>id<font size=1>link</font></i><font size=2> ]<br>
+                            <br>
+                            | <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>show-relations-of-2-versions 10</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> show-relations-of-2-versions 
+                            spec-set</font></i><i><font size=1>1 </font><font size=2>spec-set</font><font size=1>2</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ<br>
+                            <br>
+                            </font><i> show-relations-of-2-versions number</i> 
+                            • [ <i>shared-span</i> ]<br>
+                            <br>
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>find-docs-containing 22</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> find-docs-containing spec-set</i> <font face="Symbol" size=2>Þ</font> 
+                            <i>find-docs-containing number</i> • [ <i>id<font size=1>doc</font></i><font size=2> 
+                            ]<br>
+                            <br>
+                            | <i>error</i> </font></dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=2><b>insert 0</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> insert id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            <i>vaddr number</i> • [ <i>string</i> ] </font><font face="Symbol" size=2>Þ</font> 
+                            <i>insert</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>copy 2</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> copy id<font size=1>doc</font></i><font size=2> 
+                            <i>vaddr spec-set</i> </font><font face="Symbol" size=2>Þ</font> 
+                            <i>copy</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>ii.rearrange; 3</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> cut-count</i> ::= ‘<font face="Courier, Courier" size=2>2</font>’ 
+                            <i>delim </i>| ‘<font face="Courier, Courier" size=2>3</font>’ 
+                            <i>delim </i>| ‘<font face="Courier, Courier" size=2>4</font>’ 
+                            <i>delim<br>
+                            <br>
+                            rearrange id<font size=1>doc</font></i><font size=2> 
+                            <i>cut-count</i> • [ <i>vaddr</i> ] </font><font face="Symbol" size=2>Þ</font> 
+                            <i>rearrange</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>delete-vspan 12</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> delete-vspan id<font size=1>doc</font></i><font size=2> 
+                            <i>vspan</i> </font><font face="Symbol" size=2>Þ</font> 
+                            <i>delete-vspan</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>quit 16</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> quit </i><font face="Symbol" size=2>Þ</font> 
+                            <i>quit</i> (The <i>quit</i> call can’t return error.) 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>x-account 34</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> x-account id<font size=1>account</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>x-account</i> 
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b>create-node-or-account 38</b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i> create-node-or-account id<font size=1>account</font></i><font face="Symbol" size=2>Þ</font> 
+                            <i>create-node-or-account id<font size=1>account<br>
+                            <br>
+                            </font></i><font size=2> | <i>error </i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <P ALIGN="left">&nbsp;
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

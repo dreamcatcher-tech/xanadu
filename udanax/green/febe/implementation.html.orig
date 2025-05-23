@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Implementation</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>Implementation</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> How does our implementation fit the demands 
+      of the philosophy and motivation? The major elements of the implementation 
+      are: 
+      <dir> </dir>
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • Links<br>
+              <br>
+              • Versions<br>
+              <br>
+              • Unbounded information pools<br>
+              <br>
+              • Support for cooperating users </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=4><b>Links<br>
+      <br>
+      </b></font>Links, more than any other feature, build and maintain the web 
+      of context.<br>
+      <br>
+      We decided that the essential features were: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • The ability to do extremely fine-grained linking<br>
+              <br>
+              • The ability to do complex linking<br>
+              <br>
+              • Allowing the frontend to define and interpret the meaning of links<br>
+              <br>
+              • The ability to follow links bidirectionally. The ability to enter 
+              and exit documents quickly when following links.<br>
+              <br>
+              • The preservation of links across edits. </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=4><b>Fine-grained Linking<br>
+      <br>
+      </b></font>&nbsp;<br>
+      <br>
+      In literature, footnotes and quotes may specify a single word. Hypertext 
+      should provide similar or superior fine-grain linking: linking to a particular 
+      word or to a single number. &quot;Chunky&quot; hypertext only allows you 
+      to link to larger collections of data (such as &quot;cards&quot; in HyperCard). 
+      The reader must then try to find the one relevant piece of information within 
+      the &quot;chunk&quot;.<br>
+      <br>
+      Clearly the writer must be able to link to individual bytes. Such linking 
+      should be at the writer’s discretion. Rather than forcing linking according 
+      to some predefined hierarchy the writer should decide exactly what is included 
+      as the end of a link.<br>
+      <br>
+      <br>
+      <font size=4><b>Complex Linking<br>
+      <br>
+      </b></font> Letting the writer decide exactly what is included as the end 
+      of a link means providing as much flexibility as possible. The ability to 
+      freely and flexibly construct links means being able to: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • link within documents.<br>
+              <br>
+              • link between documents. Example: a scholar writes a new interpretation 
+              of ancient Greek society, with numerous quotations from the writings 
+              of those times. The scholar could draw links from those quotes to 
+              the original texts, allowing the reader to follow the link and see 
+              the quote in situ.<br>
+              <br>
+              • link to other links. Text itself or whole documents are not the 
+              only things to be linked. Links themselves have information content 
+              on which people might wish to comment.<br>
+              <br>
+              • group disjoint sets of text, i.e., select a span of text, a span 
+              of links or a span of documents and define them as a single unit 
+              to form one end of a link. (The set of objects that form one end 
+              of a link is known as an &quot;end-set&quot;.) On a small scale, 
+              this gives the same capability as when an ellipsis links disjoint 
+              text: &quot;She said…that she would do it.&quot; On a larger scale, 
+              there could be a link whose end-set would be the span of all the 
+              documents written by Brian Kernighan. Or, you could assemble a link 
+              that had a set of disjoint spans as an end-set, such as everything 
+              written by Brian Kernighan and everything written by Doug Engelbart. 
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=4><b>Identifying the Meaning of Links<br>
+      <br>
+      </b></font> As the amount of connected material begins to grow, we need 
+      ways to clarify and identify links to avoid being lost in the webbed information. 
+      Where is a link from? Where is the link to? What type of link is it: a quotation, 
+      a refutation, a footnote, a bibliographic reference, a bibliographic collection, 
+      etc.? We gave the frontend the ability to choose whether to answer these 
+      questions and what meaning to give the answers.<br>
+      <br>
+      Why didn’t we define a series of link types ourselves? It would make things 
+      simpler if Udanax itself decided on a fixed set of link types. But we also 
+      realize that we couldn’t possibly know or conceive of every kind of connection 
+      people would want to make. We will advocate certain conventions so things 
+      written by one system are readable by another, but we will not enforce any 
+      policies.<br>
+      <br>
+      <font size=4><b><br>
+      Bidirectional Links<br>
+      <br>
+      </b></font> Links need to be at least bidirectional. In other words, when 
+      a link is created, the reader can go in either direction. Of course you’d 
+      want to be able to go from a document to a critique of that document. But 
+      imagine the person stumbling by chance into an ongoing heated technical 
+      debate. He’d want to follow links backward along the chain of creation to 
+      read source documents or trace the line of debate.<br>
+      <br>
+      Bidirectional links fulfill the scholar’s greatest fantasy: if an author 
+      creates references pointing backward to earlier works, the readers of those 
+      earlier works can follow the reference forward and find the later writings.<br>
+      <br>
+      Udanax links are actually more powerful than bidirectional links. This greater 
+      power is discussed later in this document.<br>
+      <br>
+      <br>
+      <font size=4><b>Stability Across Changes<br>
+      <br>
+      </b></font> Information is dynamic. Documents have to be editable, and you 
+      want the links to survive the editing process still connected to their material. 
+      You do not want the user to be referred back to some previous generation 
+      of document when the link was first made, or referred to whatever text happens 
+      to be at the link’s original location in the document.<br>
+      <br>
+      Maintaining connectivity across edits is a very difficult technical problem. 
+      Its difficulty has led others to resort to &quot;chunky&quot; hypertext 
+      in which all you can do is link to an entire document or to a point in a 
+      hierarchy. This means that links can’t represent the real semantics of desired 
+      connections.<br>
+      <br>
+      In Udanax Green, the links survive editing, rearranging, and changing. They 
+      stay connected to the material they were connected to originally. The link 
+      will show where rearranged material is now appearing in the document.<br>
+      <br>
+      <br>
+      <font size=4><b>Versions<br>
+      <br>
+      </b></font><a name="index7"></a>Besides links, there are three other key 
+      features of the Udanax Green implementation: versions, unbounded information 
+      pools, and support for multiple users.<br>
+      <br>
+      Versioning gives us context on material over time and through changes. Even 
+      relatively stable forms such as books go through drafts, versions, editions, 
+      modifications for publication in different formats. Versions arise and are 
+      maintained when several possible plans or variants of designs are created 
+      to suit different needs or eventualities.<br>
+      <br>
+      In its most mundane form, version control is a frustrating problem: what 
+      do you name this backup copy? where do you put it? how do you know which 
+      version had the information this way or that way? But often, our need for 
+      versions is acute, as when we desperately wish to be able to go back in 
+      time and restore a document to an earlier state.<br>
+      <br>
+      Our &quot;version compare&quot; differs from the heuristic-driven content 
+      comparison such as the Unix command &quot;diff&quot;. Version compare traces 
+      the lineage of the actual bytes and tells how two versions differ according 
+      to the edits that resulted in two documents.<br>
+      <br>
+      <br>
+      <font size=4><b>Unbounded Information Pools<br>
+      <br>
+      </b></font>Udanax’s motivation is to allow users to construct and use information 
+      pools of unlimited size. Much software fails because it doesn’t scale. Many 
+      systems that are obviously just too small are still 10 times the maximum 
+      size that the system creator imagined anyone would ever possibly want. We 
+      knew we weren’t creative enough to imagine the largest thing someone might 
+      want to do with the Udanax software. So we did a design that would keep 
+      working as things scaled beyond our imaginations.<br>
+      <br>
+      This decision had interesting implications for edits: what if someone wants 
+      to insert an extra word at the front of a document the size of <i>War and 
+      Peace</i> – how would we handle the overhead of moving everything that followed? 
+      So in our system, unlike in traditional systems, when you edit by inserting, 
+      deleting or rearranging, the rest of the document is left in place.<br>
+      <br>
+      Tumbler addressing is an example of how we have designed Udanax Green to 
+      allow maximal scaling. Each document in the system has a unique address. 
+      If some years from now many Udanax Green systems were to be interconnected, 
+      no confusion would result.<br>
+      <br>
+      <font size=4><b><br>
+      Cooperating Users<br>
+      <br>
+      </b></font><a name="index8"></a>Existing and planned features are designed 
+      to make Udanax Green good at enhancing the diversity that results from &quot;social&quot; 
+      computing: collaborative editing, electronic mail, and computer conferencing.<br>
+      <br>
+      We support collaboration by forking versions of documents. As in a traditional 
+      file system, the frontend opens a document and reserves a consistent view 
+      of that document. Traditional systems can’t resolve the conflict of two 
+      users writing to the same document at the same time. Udanax Green simply 
+      creates a version for each writer, and then provides the facilities to resolve 
+      any conflicts. <font face="Courier, Courier" size=1> </font> 
+      <P ALIGN="left">&nbsp;
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

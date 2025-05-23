@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Versions</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>Versions</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" -->
+      <div align="center"><font size=6> </font></div>
+      <font size=4><b> Introduction<br>
+      <br>
+      </b></font>This chapter starts with a simple scenario that highlights the 
+      need for a document open operation. It then develops the operation, adding 
+      capability. The examples demonstrate the relation between the document open 
+      operation and version creation. Finally, the version comparison operation 
+      is discussed.<br>
+      <br>
+      <font size=4><b>Why Versions?<br>
+      <br>
+      </b></font>The simplest example to show the need for an open operation is 
+      simultaneous editing of a document by two authors. If they both edit the 
+      same copy of the document, their conflicting changes could destroy it. The 
+      first frontend to open the document edits the existing copy. Later frontends 
+      must either fail or open a new virtual copy of the document (determined 
+      by an argument to open). The virtual copy is equivalent to a new version 
+      of the document, so later efforts to recombine the independent changes of 
+      the two documents have the full support of the version comparison mechanism 
+      (described below).<br>
+      <br>
+      When the open operation makes a copy for the second writer, it copies the 
+      state of the document as of the moment of the copy operation. This includes 
+      all the changes made by the first author. This means that locks ‘created’ 
+      by the open operation are transparent to readers. The current transparency 
+      of locking is acceptable because it only allows the owner of a document 
+      to change the original version. Other users can make and edit their own 
+      versions, but they cannot edit the original.<br>
+      <br>
+      <font size=4><b>Read-only and Read-write<br>
+      <br>
+      </b></font>Since documents will often be opened just for reading, the open 
+      operation supports two modes: read-only and read-write. The above example 
+      uses read-write capability for both authors. Reading a document does not 
+      modify the contents of a document, so multiple users can read a single copy 
+      at the same time. If the document is opened for reading, writing to the 
+      document is prevented. Otherwise a user could be trying to read a constantly 
+      changing document.<br>
+      <br>
+      The experimental frontend supports even more complex behavior. The frontend 
+      initially opens documents for read-only. It assumes the typical case in 
+      which users only wish to browse the information. Any user can start editing 
+      the contents of a document, however. The frontend then closes the read-only 
+      connection and opens the document again for writing. The reopening of the 
+      document will fail if any other users were reading the same document, or 
+      if any open operations on that document happened between the close and the 
+      open operations. If the open fails, the frontend can open a new version 
+      and redisplay the possibly modified contents.<br>
+      <br>
+      <font size=4><b>Parallel Versions<br>
+      <br>
+      </b></font>When two authors separately edit different versions of the same 
+      document, they create parallel versions. To recombine these into one version, 
+      the authors must compare their versions to discover conflicting changes, 
+      and regions unchanged by either author. Xanadu’s version comparison operation 
+      describes the data shared by two documents due to operations which explicitly 
+      copy contents. It describes the contents retained by parallel versions from 
+      their mutual ancestor, the data retained by a sequential version from its 
+      ancestor, or the contents copied from one document to another.<br>
+      <br>
+      <font size=4><b>Comparison<br>
+      <br>
+      </b></font>The comparison operation does not compare the contents directly. 
+      The version comparison operation must apply to ANY byte representable data. 
+      Content comparison algorithms such as Unix diff use data-specific heuristics, 
+      so they cannot possibly work for all types of data. Also, the topological 
+      nature of connections in Xanadu add differences to apparently identical 
+      contents. For example, imagine a document which describes a particular database 
+      record structure. The document contains enough spaces for every character 
+      of every field. The frontend defines each field by attaching a link to the 
+      characters in the field. The frontend can now rearrange the fields in a 
+      record simply by swapping the contents. Like any editing process, the user 
+      might want to compare alternatives, undo changes, or check differences between 
+      the current and past versions. Content comparison reveals nothing. The Xanadu 
+      comparison operation shows the actual field differences. 
+      <P ALIGN="left">&nbsp;
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

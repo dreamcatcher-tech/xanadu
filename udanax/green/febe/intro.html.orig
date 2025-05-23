@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>FeBe Introduction</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>FeBe 
+              Introduction</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> 
+      <div align="center"><font size=6> </font></div>
+      <font size=4><b> Udanax.com<br>
+      <br>
+      </b></font><br>
+      This overview brings you up to date on Udanax’s business situation as of 
+      1988, plans for the software, release dates, and how frontend developers 
+      fit into the picture.<br>
+      <br>
+      Since 1979 (till 1995) Udanax.com has been developing the software to implement 
+      a full-featured hypertext system as originally envisioned by Ted Nelson 
+      in 1960 and since expanded by the Udanax team. This software will provide 
+      a powerful, unified system for storing, relating and managing any type of 
+      information: text, graphics, multimedia, CAD/CAM drawings, music, numbers. 
+      Today, the code already embodies all the basic capabilities necessary for 
+      a full-featured hypertext system: links, versions, and support for cooperating 
+      users.<br>
+      <br>
+      In April 1988, Autodesk, Inc. of Sausalito, California, best known for their 
+      AutoCAD family of software, acquired a majority interest in Udanax.com and 
+      is providing the funding and support needed to complete the first Udanax 
+      hypertext product and bring it to market. We have announced late 1989 as 
+      our goal for our first product release.<br>
+      <br>
+      <font size=4><b>Product Development Plans<br>
+      <br>
+      </b></font> The capabilities that we plan to add continue the same themes. 
+      A partial list of extensions includes: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • more platforms on which Udanax Green runs<br>
+              <br>
+              • communicating backends sharing documents<br>
+              <br>
+              • addition of timestamps to better keep track of different versions<br>
+              <br>
+              • implementation of access control and permissions<br>
+              <br>
+              • addition of a historical trace which contains the edit history 
+              and version history of documents. </dir>
+          </dir>
+        </dir>
+      </dir>
+      <font size=4><b>Developers and Frontends<br>
+      <br>
+      </b></font>In the context of the Udanax Green system, the backend handles 
+      storage, retrieval, versioning, linking and editing of data with no knowledge 
+      about the nature of the data being handled. The backend never interacts 
+      directly with the user; there is always a frontend handling the FeBe Protocol.<br>
+      <br>
+      In contrast to the backend, frontends are advanced application packages 
+      that: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> • interact with users<br>
+              <br>
+              • interface to input and output devices<br>
+              <br>
+              • interpret the stored data as text, pictures or music<br>
+              <br>
+              • format the data for display<br>
+              <br>
+              • incorporate numeric manipulations or other operations to be worked 
+              on data<br>
+              <br>
+              • are specialized to serve particular market needs<br>
+              <br>
+              • create, implement and manage the metaphors for working in hypertext 
+              and hypermedia environments. </dir>
+          </dir>
+        </dir>
+      </dir>
+      Frontends will be primarily produced by third party developers. Udanax.com 
+      does plan to produce at least one general purpose frontend exemplar that 
+      demonstrates wide usage of hypertext features, and explores some of the 
+      new capabilities now possible. This frontend will serve as a guide for software 
+      developers, and ensure that a piece of generalized hypertext software is 
+      available for the first product release date. Udanax.com does <i>not</i> 
+      intend to compete with third party developers. Udanax.com will cooperate 
+      with and assist its third party frontend developers.<br>
+      <br>
+      With the backend’s universal ability to handle any type of input and any 
+      size document network, Udanax Green can be fitted to a wide range of applications 
+      in all market segments. In thinking about hypertext issues, we have identified 
+      six areas which, because of their inherent information complexity and the 
+      established presence of computer technology, are strong candidates for early 
+      frontend applications: 
+      <dir> 
+        <dir> 1. CASE (Computer-Aided Software Engineering) Software development 
+          and maintenance<br>
+          <br>
+          A software development and maintenance product could use the Udanax 
+          backend to handle documentation, and manage both source and object code, 
+          while the frontend would offer local capabilities for compiling, executing 
+          and debugging programs.<br>
+          <br>
+          2. CAD/CAM/CAE and Engineering Project Documentation Management<br>
+          <br>
+          The Udanax backend allows precise control over the growth of versions 
+          and variations in documents and diagrams. Customized and up-to-the-minute 
+          system descriptions can be developed more reliably, more quickly, and 
+          less expensively.<br>
+          <br>
+          3. Document Library Storage and Retrieval (research groups, legal, etc.)<br>
+          <br>
+          Procedure manuals, policy manuals and catalogs can be annotated for 
+          both public and private use. The rich interconnection of different sections 
+          of documents allows the occasional user to swiftly find relevant items; 
+          the annotations allow the refinement of understanding achieved with 
+          experience to propagate throughout the organization at great speed. 
+          The result is a swifter evolution of the organization’s policies and 
+          procedures, and swifter adaptation to changing tools, capabilities, 
+          and situations.<br>
+          <br>
+          4. Office Automation and Intra-Organizational Communications Systems<br>
+          <br>
+          Most people work in groups, and the projects they work on are increasingly 
+          complex. Udanax hypertext makes possible group thinking, planning and 
+          writing. In one example, multiple people commonly work on single documents 
+          and wonder who made what change to the current draft. A single project 
+          produces multiple documents, all of which must be kept consistent: specifications, 
+          documentation, product announcement. The complexity cascades as the 
+          change of a single number or word must be traced out into every other 
+          document and corrected. Hypertext embodies the operations necessary 
+          to trace sources, track versions, attribute revisions, and ensure consistency 
+          during the process.<br>
+          <br>
+          5. Management of Data in Complex Formats (e.g., cartographic or geographic 
+          data)<br>
+          <br>
+          Research institutes often have a variety of complex data, all in non-standard 
+          formats. For a cartographic group this might include soil sample lab 
+          tests, seismic charts, LANDSAT and SPOT photos, artists’ sketches, field 
+          reports, historical records. Only hypertext can create a database for 
+          the management of complex format data of this sort.<br>
+          <br>
+          6. Computer Aided Instruction<br>
+          <br>
+          The blending of multiple media – text, graphics, animation and video 
+          – allows the construction of educational material that holds the reader’s 
+          interest. The rich linking of training modules gives the reader the 
+          ability to browse the material, focusing on those sections relevant 
+          to his curiosity at any moment, giving him a level of control over the 
+          order of presentation previously impossible. </dir>
+      </dir>
+      This may only scratch the surface of current market opportunities. We are 
+      looking forward to being surprised and impressed by the variety, inventiveness 
+      and elegance of applications created by frontend developers.<br>
+      <br>
+      We are interested in encouraging qualified software developers, and in exploring 
+      a variety of possible relationships regarding both software development 
+      and marketing. 
+      <dir> 
+        <dir> 
+          <dir></dir>
+        </dir>
+      </dir>
+      <P ALIGN="left">&nbsp; 
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

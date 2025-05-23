@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> <!--last modified on Saturday, October 03, 1998 04:19 PM --> 
+<HTML>
+<!-- #BeginTemplate "/Templates/green.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Bibliography</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>Bibliography</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" -->
+      <P ALIGN="left">
+      <font size=6> <a name="index23"></a>Bibliography</font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> <font size=2> Bush 45</font> <i>As We May Think<br>
+                      <br>
+                      </i> by Vannevar Bush<i> Atlantic Monthly</i>, July 1945, 
+                      pp101-108.<br>
+                      <br>
+                      <font size=2> Engelbart 68</font> <i>A Research Center for 
+                      Augmenting Human Intellect.<br>
+                      <br>
+                      <br>
+                      <br>
+                      </i> by Engelbart D. C. &amp; English W. K. Proceedings 
+                      of 1968 Fall Joint Computer Conference, AFIPS press, pp395-410.<br>
+                      <br>
+                      <font size=2> Nelson 74</font> <i>ComputerLib/Dream Machines</i> 
+                      by Theodor Holm Nelson First edition, 1974 Second edition, 
+                      Microsoft Press, 1987<br>
+                      <br>
+                      <font size=2> K&amp;R 78</font> <i>The C Programming Language</i> 
+                      by Brian W. Kernighan &amp; Dennis M. Ritchie First edition, 
+                      Prentice Hall Inc., 1978<br>
+                      <br>
+                      <font size=2> Harbison&amp;Steele 84</font> <i>C – A Reference 
+                      Manual</i> by Samuel P. Harbison and Guy L. Steele Jr. First 
+                      edition, Prentice Hall 1984<br>
+                      <br>
+                      <font size=2> Nelson 87</font> <i>Literary Machines</i> 
+                      by Theodor Holm Nelson 1980, 1981, 1982, 1983, 1984, 1987<br>
+                      <br>
+                      <font size=2> Nelson 88</font> <i>Managing Immense Storage</i> 
+                      by Theodor Holm Nelson<i> Byte</i> Magazine, January 1988 
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p>
+        <table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr> 
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related 
+                    Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact 
+                us</a></i> or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

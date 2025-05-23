@@ -1,0 +1,1293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Saturday, October 03, 1998 04:19 PM -->
+<HTML><!-- #BeginTemplate "/Templates/green.dwt" -->
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" -->
+<TITLE>FeBe Protocol</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><B>FeBe 
+              Protocol</B><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> <font size=5><b>Metasyntax<br>
+      <br>
+      </b></font>To be able to discuss the syntax and semantics of the FeBe Protocol, 
+      we need a metasyntax.<br>
+      <br>
+      Terminal symbols are printed using a <font face="Courier,
+      Courier">fixed</font> typeface. Non-terminal symbols are written in <i>cursive</i> 
+      style. Subscripted labels are only for documentation. Descriptions of commands 
+      refer to arguments using these labels.<br>
+      <br>
+      The brackets `[' and `]' are meta-syntactic symbols. They designate optional 
+      and/or repeating sequences.<br>
+      <br>
+      [ <i>symbol</i> ]? zero or one occurrence of <i>symbol<br>
+      <br>
+      </i>[ <i>symbol</i> ]* zero or more occurrences of <i>symbol<br>
+      <br>
+      </i>[ <i>symbol</i> ]+ one or more occurrences of <i>symbol </i> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> <i> number</i> * [ <i>symbol</i> ] <i>number</i> followed 
+                        by <i>number</i> occurrences of <i>symbol</i> </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      The arrow `<font face="Symbol">Þ</font>' specifies a call and return sequence 
+      in the protocol: 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> call</i> </font><font
+                           face="Symbol" size=2>Þ</font> <i>result</i> | <i>error</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      For a more detailed discussion, please refer to the introduction of &quot;Appendix 
+      A - FeBe Protocol Syntax&quot;.<br>
+      <br>
+      <b><font size=5> Lexical Components<br>
+      <br>
+      </font></b><b><font size=4> Special Characters</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> newline</i> ::= This is the 
+                            character 12</font><font
+                            size=1>8</font><font size=2> or A</font><font size=1>16</font><font
+                            size=2>, often represented as '\n' in C.<br>
+                            <br>
+                            <i> delim</i> ::= `</font><font
+                             face="Courier, Courier" size=2>~</font>' | <i>newline<br>
+                            <br>
+                            digit</i> ::= `<font face="Courier, Courier"
+                            size=2>0</font>' | `<font face="Courier, Courier"
+                            size=2>1</font>' | `<font face="Courier, Courier"
+                            size=2>2</font>' | `<font face="Courier, Courier"
+                            size=2>3</font>' | `<font face="Courier, Courier"
+                            size=2>4</font>' | `<font face="Courier, Courier"
+                            size=2>5</font>' | `<font face="Courier, Courier"
+                            size=2>6</font>' | `<font face="Courier, Courier"
+                            size=2>7</font>' | `<font face="Courier, Courier"
+                            size=2>8</font>' | `<font face="Courier, Courier"
+                            size=2>9</font>'<br>
+                            <br>
+                            <i> byte</i> ::= Any 8 bit value </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      The FeBe Protocol uses 8 bit ASCII characters without parity. Commands that 
+      transfer data-bytes transfer count delimited sequences of bytes. The protocol 
+      does not reserve any escape codes within data transmissions.<br>
+      <br>
+      <font size=4><b>Errors</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> error</i> ::= `</font><font face="Courier, Courier" size=2>?</font>' 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Calls to the backend that succeed return their command number followed by 
+      any return values. Calls that fail for any reason return only the single 
+      character `<font face="Courier, Courier">?</font>'.<br>
+      <br>
+      <font size=4><b>Tumblers</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> number</i> ::= [ <i>digit</i> 
+                            ]+ <i>delim<br>
+                            <br>
+                            exponent</i> ::= [ <i>digit</i> ]+<br>
+                            <br>
+                            <i> tumbler</i> ::= <i>exponent</i> [ `</font><font face="Courier, Courier" size=2>.</font>' 
+                            [ <i>digit</i> ]+ ]* <i>delim</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A tumbler is an ordered sequence of numbers; for example, &quot;<font face="Courier, Courier">123.45.0.89.1</font>&quot; 
+      or &quot;<font face="Courier, Courier">32.17</font>&quot;.<br>
+      <br>
+      Each number within a tumbler is called a &quot;tumbler digit&quot;.<br>
+      <br>
+      In the tumbler &quot;<font face="Courier,
+      Courier"><u>123</u>.<u>45</u>.<u>0</u>.<u>89</u>.<u>1</u></font>&quot; the 
+      underlined parts of the tumbler are &quot;tumbler digits&quot;. The zero 
+      (`<font face="Courier, Courier">.0.</font>') tumbler digit (when not in 
+      the exponent position) is only used as a separator in address tumblers. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> <font face="Zapf Dingbats" size=6> + </font>In the 88.1x 
+                  implementation of the FeBe protocol each tumbler digit has to 
+                  be in the range of 0 to 4,294,967,295 (2<font
+                  size=1>32</font>-1). </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Comparison and arithmetic operations on tumblers align tumbler-digits from 
+      the left. Since tumblers used as widths for spans often start with many 
+      zeroes, FeBe uses a compact representation for tumblers. The first tumbler 
+      digit in the representation is the number of zero tumbler digits at the 
+      beginning of the tumbler. Thus, the tumblers &quot;<font
+      face="Courier, Courier">32.2</font>&quot; and &quot;<font face="Courier, Courier">0.0.0.14.5</font>&quot; 
+      are represented by &quot;<font face="Courier, Courier">0</font>.<font
+      face="Courier, Courier">32.2</font>&quot; and &quot;<font face="Courier, Courier">3.14.5.</font>&quot; 
+      This leading tumbler digit is referred to as the exponent of the tumbler. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> <font face="Zapf Dingbats" size=6> + </font>In the 88.1x 
+                  implementation of the FeBe protocol there may be a maximum of 
+                  11 non-zero tumbler digits plus exponent in any one tumbler. 
+                  This restriction will be eliminated in a later release.<br>
+                  <br>
+                  <font size=2><i> &nbsp; </i></font> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> id</i> ::= <i>tumbler</i></font> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      These tumblers are global identifiers. IDs can refer to any Udanax Green 
+      objects. (See the chapter &quot;Addressing&quot; for more details.) 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> vaddr</i> ::= <i>exponent</i> 
+                            `</font><font face="Courier, Courier"
+                            size=2>.</font>' [ <i>digit</i> ]+ [ `<font face="Courier,
+                            Courier" size=2>.</font>' [ <i>digit</i> ]+ ]? <i>delim</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      These tumblers are relative to a given document, so they only have one or 
+      two digits. The first digit determines the space (1=text, 2=link). The second 
+      digit determines the location within that space.<br>
+      <br>
+      <font size=4><b>Groups</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> span</i> ::= <i>tumbler</i></font><i><font size=1>start 
+                            </font><font size=2>tumbler</font><font
+                             size=1>width</font></i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A span specifies a range of Udanax Green objects in the global address space. 
+      Spans include all objects between <i>tumbler<font size=1>start </font></i>inclusive 
+      and <i>tumbler<font size=1>start </font></i>plus <i>tumbler<font
+      size=1>width </font></i>exclusive. (See the chapters &quot;Tumbler Arithmetic&quot; 
+      and &quot;Addressing&quot;.) 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> vspan</i> ::= <i>vaddr</i></font><i><font size=1>start 
+                            </font><font size=2>vaddr</font><font
+                             size=1>width</font></i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A vspan specifies a range of data-bytes and/or links within a given document. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> spec</i> ::= `</font><font face="Courier, Courier" size=2>s</font>' 
+                            <i>delim span<br>
+                            <br>
+                            </i> | `<font face="Courier, Courier"
+                             size=2>v</font>' <i>delim doc-id number</i> * [ <i>vspan</i> 
+                            ]<br>
+                            <br>
+                            <i> spec-set</i> ::= <i>number</i> * [ <i>spec</i> 
+                            ] </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A spec-set specifies a possibly discontinuous set of Udanax Green objects. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> shared-span</i> ::= <i>tumbler</i></font><i><font size=1>start-1</font><font size=2> 
+                            tumbler</font><font size=1>start -2</font><font size=2> 
+                            tumbler</font><font size=1>width</font></i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A shared-span indicates that the span specified by <i>tumbler<font
+      size=1>start-1</font> </i>and <i>tumbler<font size=1>width </font></i>represents 
+      the same Udanax Green objects as the span specified by <i>tumbler<font size=1>start 
+      -2</font> </i>and <i>tumbler<font size=1>width</font></i>. Only the version 
+      comparison operation returns shared-spans.<br>
+      <br>
+      <font size=4><b>Document Contents</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> string</i> ::= `</font><font face="Courier, Courier" size=2>t</font>' 
+                            <i>number</i> * [ <i>byte</i> ] </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Strings wrap data-bytes for transmission between the frontend and the backend. 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> <font face="Zapf Dingbats" size=6> + </font>In the current 
+                  implementation (88.1x) there is a maximum of 950 data-bytes 
+                  in a single string. This limitation will be removed in future 
+                  releases. It is <i>not</i> recommended to even try to write 
+                  longer strings to the backend.<br>
+                  <br>
+                  <font size=2><i> &nbsp; </i></font> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> contents</i> ::= <i>string</i> 
+                            | <i>id</i></font><i><font
+                            size=1>link</font></i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Documents contain data-bytes and links. A frontend can retrieve a span that 
+      contains both.<br>
+      <br>
+      <b><font size=5> Command Codes</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> <font size=2> <i> create-new-document</i> ::= `</font><font face="Courier, Courier"
+                          size=2>11</font>' <i>delim<br>
+                          <br>
+                          create-new-version</i> ::= `<font
+                          face="Courier, Courier" size=2>13</font>' <i>delim<br>
+                          <br>
+                          open</i> ::= `<font face="Courier, Courier"
+                          size=2>35</font>' <i>delim<br>
+                          <br>
+                          close</i> ::= `<font face="Courier, Courier"
+                          size=2>36</font>' <i>delim<br>
+                          <br>
+                          create-link</i> ::= `<font face="Courier,
+                          Courier" size=2>27</font>' <i>delim<br>
+                          <br>
+                          retrieve-doc-vspan</i> ::= `<font
+                          face="Courier, Courier" size=2>14</font>' <i>delim<br>
+                          <br>
+                          retrieve-doc-vspanset</i> ::= `<font
+                          face="Courier, Courier" size=2>1</font>' <i>delim<br>
+                          <br>
+                          retrieve-v</i> ::= `<font face="Courier,
+                          Courier" size=2>5</font>' <i>delim<br>
+                          <br>
+                          follow-link</i> ::= `<font face="Courier,
+                          Courier" size=2>18</font>' <i>delim<br>
+                          <br>
+                          retrieve-endsets</i> ::= `<font face="Courier,
+                          Courier" size=2>28</font>' <i>delim<br>
+                          <br>
+                          find-links-from-to-three</i> ::= `<font
+                          face="Courier, Courier" size=2>30</font>' <i>delim<br>
+                          <br>
+                          show-relations-of-2-versions</i> ::= `<font
+                          face="Courier, Courier" size=2>10</font>' <i>delim<br>
+                          <br>
+                          find-docs-containing </i>::= `<font
+                          face="Courier, Courier" size=2>22</font>' <i>delim<br>
+                          <br>
+                          insert</i> ::= `<font face="Courier, Courier"
+                          size=2>0</font>' <i>delim<br>
+                          <br>
+                          copy</i> ::= `<font face="Courier, Courier"
+                          size=2>2</font>' <i>delim<br>
+                          <br>
+                          rearrange</i> ::= `<font face="Courier,
+                          Courier" size=2>3</font>' <i>delim<br>
+                          <br>
+                          delete-vspan</i> ::= `<font face="Courier,
+                          Courier" size=2>12</font>' <i>delim<br>
+                          <br>
+                          quit</i> ::= `<font face="Courier, Courier"
+                          size=2>16</font>' <i>delim<br>
+                          <br>
+                          x-account</i> ::= `<font face="Courier,
+                          Courier" size=2>34</font>' <i>delim<br>
+                          <br>
+                          create-node-or-account</i> ::= `<font
+                          face="Courier, Courier" size=2>38</font>' <i>delim</i> 
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      <b><font size=5> Creation and Access<br>
+      <br>
+      </font></b><b><font size=4> create-new-document 11</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> create-new-document</i> </font><font face="Symbol" size=2>Þ 
+                            </font><i>create-new-document id<font
+                             size=1>doc</font></i><font size=2>| <i>error</i></font> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Create a new document under the account and node of the user who issued 
+      the request. Return the global identifier for the document.<br>
+      <br>
+      This request creates the document but does not open it for access; you must 
+      issue an open request (see below) to access the data in the new document.<br>
+      <br>
+      <font size=4><b>create-new-version 13</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> create-new-version id</font></i><i><font size=1>old-doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>create-new-version 
+                            id<font size=1>new-doc</font></i><font
+                            size=2>| <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return the identifier of a new copy of <i>id<font
+      size=1>old-doc</font></i>. <i>id<font size=1>new-doc </font></i>contains 
+      the same data and links as <i>id<font size=1>old-doc</font></i>. Links to 
+      those contents are visible from either document.<br>
+      <br>
+      This request creates the document but does not open it for access; you must 
+      issue an open request (see below) to access the data in the new document.<br>
+      <br>
+      <font size=4><b>open 35</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> mode</i> ::= `</font><font face="Courier, Courier" size=2>1</font>'<font
+                           size=1><i>read-only </i></font><i><font size=2>delim 
+                            </font></i><font size=2>| `</font><font face="Courier, Courier"
+                            size=2>2</font>'<font size=1><i>read-write </i></font><i><font size=2>delim<br>
+                            <br>
+                            copy-switch</font></i><font size=2> ::= `</font><font face="Courier, Courier" size=2>1</font>'<font
+                            size=1><i>fail-on-conflict </i></font><i><font size=2>delim 
+                            </font></i><font size=2>| `</font><font face="Courier, Courier"
+                            size=2>2</font>'<font size=1><i>copy-on-conflict</i></font><font size=2> 
+                            <i>delim</i> | `</font><font face="Courier,
+                             Courier" size=2>3</font>'<font size=1><i>always-copy 
+                            </i></font><i><font size=2>delim<br>
+                            <br>
+                            open id</font><font
+                            size=1>doc</font></i><font size=2> <i>mode copy-switch</i> 
+                            </font><font
+                             face="Symbol" size=2>Þ</font> <i>open id<font size=1>new-doc 
+                            </font></i><font size=2>| <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Open <i>id<font size=1>doc</font></i> for access using <i>mode</i>. <i>Mode 
+      </i>can be <i>read-only</i> or <i>read-write</i>. Read-only capability for 
+      a document can be shared. Read-write capability is exclusive. Two situations 
+      cause conflict: a request for write access on an already open document, 
+      or a request for read access to a document already open <i>read-write</i>. 
+      When contention arises, the backend can return a copy of the document or 
+      fail. The <i>copy-switch</i> determines the circumstances in which the backend 
+      makes a copy. <i>id<font size=1>doc</font></i> and <i>id<font
+      size=1>new-doc </font></i>differ only if open makes a copy. Command descriptions 
+      which require already open documents for their arguments will be so noted. 
+      Open for read-write satisfies the requirement &quot;Must be open for reading&quot;.<br>
+      <br>
+      <font size=4><b>close 36</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> close id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>close</i> 
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Close <i>id<font size=1>doc</font></i>. All opened documents must be closed. 
+      Multiple opens of a document must balanced by the same number of close calls. 
+      A loss of connection between the frontend and backend or a quit command 
+      is the same as closing all documents and then doing a quit.<br>
+      <br>
+      <font size=4><b>create-link 27</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> create-link id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            <i>spec-set</i></font><i><font
+                             size=1>from</font><font size=2> spec-set</font><font size=1>to</font><font
+                            size=2> spec-set</font><font
+                            size=1>three</font></i><font size=2> <br>
+                            <br>
+                            </font><font face="Symbol" size=2> Þ</font> <i>create-link 
+                            id<font size=1>link</font></i><font size=2> | <i>error</i></font> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Create a link with the specified end-sets and return its identifier. The 
+      new link is appended to the link space of <i>id<font
+      size=1>doc</font></i> . <i>id<font size=1>doc</font></i> is the home for 
+      the <i>id<font
+      size=1>link</font></i> . <i>id<font size=1>doc</font></i> must already be 
+      open for writing.<br>
+      <br>
+      <b><font size=5> Content Retrieval<br>
+      <br>
+      </font></b><b><font size=4> retrieve-doc-vspan 14</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> retrieve-doc-vspan id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>retrieve-doc-vspan 
+                            vspan</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return the vspan describing the contents of <i>id<font
+      size=1>doc</font></i> , including its links. The width of the span reflects 
+      either the number of links or the number of data-bytes if there are no links. 
+      <i>id<font size=1>doc</font></i> must already be open for reading.<br>
+      <br>
+      <font size=4><b>retrieve-doc-vspanset 1</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> retrieve-doc-vspanset id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>retrieve-doc-vspanset 
+                            number</i> * [ <i>vspan</i> ]<br>
+                            <br>
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return a vspan describing each space in <i>id<font
+      size=1>doc</font></i> . If either the data or link space is empty, its vspan 
+      is left out. <i>id<font size=1>doc</font></i> must already be open for writing.<br>
+      <br>
+      <font size=4><b>retrieve-v 5</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> retrieve-v spec-set</i> </font><font face="Symbol" size=2>Þ</font> 
+                            <i>retrieve-v number</i> * [ <i>contents</i> ] | <i>error</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Retrieve data and links from the backend. The spec-set can include document 
+      identifiers, text ranges, and link identifiers. The information returned 
+      follows the order of the spec-set. All the documents in <i>spec-set </i>must 
+      be open for reading.<br>
+      <br>
+      <font size=4><b>follow-link 18</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> end-switch</i> ::= `</font><font face="Courier, Courier" size=2>1</font>'<font
+                           size=1><i>from</i></font><font size=2> <i>delim </i>| 
+                            `</font><font face="Courier,
+                             Courier" size=2>2</font>'<font size=1><i>to </i></font><i><font size=2>delim 
+                            </font></i><font size=2>| `</font><font face="Courier, Courier"
+                            size=2>3</font>'<font size=1><i>three </i></font><i><font size=2>delim<br>
+                            <br>
+                            follow-link end-switch id</font><font
+                            size=1>link</font></i><font size=2> </font><font face="Symbol" size=2>Þ</font> 
+                            <i>follow-link spec-set<font size=1>end</font></i><font
+                            size=2> | <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return an end-set of <i>id<font size=1>link</font></i> . <i>end-switch </i>determines 
+      the end-set returned.<br>
+      <br>
+      <font size=4><b>retrieve-endsets 28</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> retrieve-endsets spec-set</font></i><i><font size=1>contents</font></i><font size=2> 
+                            <br>
+                            <br>
+                            </font><font face="Symbol" size=2> Þ</font> <i>retrieve-endsets 
+                            spec-set<font size=1>from </font><font
+                            size=2>spec-set</font><font size=1>to<br>
+                            <br>
+                            </font><font size=2> spec-set</font><font
+                             size=1>three </font></i><font size=2>| <i>error</i></font> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Describes where links attach to <i>contents</i>. Each returned spec-set 
+      describes the union of all end-sets of the given type that attach to the 
+      supplied <i>spec-set<font size=1>contents</font></i>.<br>
+      <br>
+      <b><font size=5> Connection Retrieval<br>
+      <br>
+      </font></b><b><font size=4> find-links-from-to-three 30</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> home-spec</i> ::= <i>number</i> 
+                            * [ <i>id</i></font><i><font
+                            size=1>doc</font></i><font size=2>]<br>
+                            <br>
+                            <i> find-links-from-to-three spec-set</i></font><i><font size=1>from 
+                            </font><font size=2>spec-set</font><font
+                             size=1>to</font></i><font size=2> <i>spec-set</i></font><i><font size=1>three 
+                            </font><font size=2>home-spec</font></i> <font face="Symbol" size=2>Þ<br>
+                            <br>
+                            </font><i> find-links-from-to-three number</i> * [ 
+                            <i>id<font size=1>link</font></i><font
+                             size=2> ]<br>
+                            <br>
+                            | <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return the IDs of all links whose end-sets overlap the given from, to, three, 
+      and home set restrictions. All end-sets must satisfy their respective constraints. 
+      A set containing the entire docuverse places no restriction.<br>
+      <br>
+      <font size=4><b>show-relations-of-2-versions 10</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> show-relations-of-2-versions 
+                            spec-set</font></i><i><font size=1>1 </font><font size=2>spec-set</font><font size=1>2</font></i><font
+                            size=2> </font><font face="Symbol" size=2>Þ<br>
+                            <br>
+                            </font><i> show-relations-of-2-versions number</i> 
+                            * [ <i>shared-span</i> ]<br>
+                            <br>
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Structurally compare the two sets of contents. Return a list describing 
+      the shared contents; i.e., contents derived from the same source through 
+      versioning or edit operations. Identical sections entered independently 
+      are not considered shared because they came from different sources. (See 
+      the chapter &quot;Versions&quot;.) All documents mentioned in the <i>spec-sets</i> 
+      must be open for reading<br>
+      <br>
+      <font size=4><b>find-docs-containing 22</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> find-docs-containing spec-set</i> 
+                            </font><font face="Symbol" size=2>Þ<br>
+                            <br>
+                            </font><i> find-docs-containing number</i> * [ <i>id<font size=1>doc</font></i><font size=2> 
+                            ]<br>
+                            <br>
+                            | <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Return identifiers for all documents that include any of the contents specified 
+      by the argument. All documents with contents in <i>spec-set</i> must be 
+      open for reading.<br>
+      <br>
+      <b><font size=5> Editing<br>
+      <br>
+      </font></b>Editing must be done within the backend to allow structural comparison 
+      and proper interaction of editing operations and link connections.<br>
+      <br>
+      <font size=4><b>insert 0</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> insert id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            <i>vaddr number</i> * [ <i>string</i> ] </font><font face="Symbol" size=2>Þ</font> 
+                            <i>insert</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Insert text at <i>vaddr </i>in <i>id<font size=1>doc</font></i> . <i>id<font size=1>doc</font></i> 
+      must be open for writing.<br>
+      <br>
+      <font size=4><b>copy 2</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> copy id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            <i>vaddr spec-set</i> </font><font
+                             face="Symbol" size=2>Þ</font> <i>copy</i> | <i>error</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Virtually copy the contents specified by the spec-set to <i>vaddr</i> in 
+      <i>id<font size=1>doc</font></i> . <i>id<font
+       size=1>doc</font></i> must be open for writing. All documents with contents 
+      in <i>spec-set</i> must be open for reading.<br>
+      <br>
+      <font size=4><b>rearrange 3</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> cut-count</i> ::= `</font><font face="Courier, Courier" size=2>2</font>' 
+                            <i>delim </i>| `<font face="Courier,
+                             Courier" size=2>3</font>' <i>delim </i>| `<font face="Courier,
+                             Courier" size=2>4</font>' <i>delim<br>
+                            <br>
+                            rearrange id<font size=1>doc</font></i><font
+                            size=2> <i>cut-count</i> * [ <i>vaddr</i> ] </font><font face="Symbol" size=2>Þ</font> 
+                            <i>rearrange</i> | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Transpose large blocks of characters within <i>doc</i>. The number of vaddrs 
+      (<i>cut-count</i>) determines the operation. If <i>cut-count</i> equals 
+      2, delete the contents from <i>vaddr<font size=1>1</font></i> to <i>vaddr<font size=1>2</font></i>. 
+      If <i>cut-count</i> equals 3, swap the contents from <i>vaddr<font
+      size=1>1</font></i> to <i>vaddr<font size=1>2</font></i> with the contents 
+      from <i>vaddr<font size=1>2</font></i> to <i>vaddr<font size=1>3</font></i>. 
+      If cut-count equals 4, swap the contents from <i>vaddr<font size=1>1</font></i> 
+      to <i>vaddr<font
+      size=1>2</font></i> with the contents from <i>vaddr<font size=1>3</font></i> 
+      to <i>vaddr<font size=1>4</font></i>. The first vaddr specifying a range 
+      must be less than or equal to the second vaddr for that range. <i>id<font size=1>doc</font></i> 
+      must be open for writing.<br>
+      <br>
+      <font size=4><b>delete-vspan 12</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> delete-vspan id</font></i><i><font size=1>doc</font></i><font size=2> 
+                            <i>vspan</i> </font><font face="Symbol"
+                             size=2>Þ</font> <i>delete-vspan</i> | <i>error</i> 
+                          </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Remove the bytes specified by <i>vspan</i> from <i>id<font
+      size=1>doc</font></i> . <i>id<font size=1>doc</font></i> must be open for 
+      writing.<br>
+      <br>
+      <b><font size=5> Session Control<br>
+      <br>
+      </font></b>Frontends and backends initially negotiate about the protocol 
+      they will use. (The protocol negotiation for a session and some of the FeBe 
+      commands are demonstrated in the chapter &quot;FeBe Example&quot;.)<br>
+      <br>
+      <font size=4><b>quit 16</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <font size=2> <i> quit</i> </font><font
+                           face="Symbol" size=2>Þ</font> <i>quit</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Terminate the connection between the frontend and the backend. If appropriate, 
+      the backend saves and terminates. Quit never returns an error.<br>
+      <br>
+      <font size=4><b>x-account 34</b></font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> x-account id</font></i><i><font size=1>account</font></i><font size=2> 
+                            </font><font face="Symbol" size=2>Þ</font> <i>x-account</i> 
+                            | <i>error</i> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      The backend associates <i>account</i> with the current connection and frontend. 
+      It causes the current user to be considered the owner of <i>account</i>. 
+      The multi-user backend requires that this command be sent from within the 
+      standard login sequence. You can only login once per session.<br>
+      <br>
+      <b><font size=5> Administration<br>
+      <br>
+      </font></b><b><font size=4> create-node-or-account 38</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> create-node-or-account id</font></i><i><font size=1>account</font></i><font face="Symbol"
+                           size=2>Þ</font> <i>create-node-or-account id<font
+                             size=1>account<br>
+                            <br>
+                            </font></i><font size=2> | <i>error</i></font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      Declare that <i>account</i> is a legal account or node. If <i>account</i> 
+      is an account tumbler, then the backend creates the account. If it is a 
+      node tumbler, then the backend reassigns its own address to <i>account</i>.<br>
+      <br>
+      <b><font size=5> Null Command<br>
+      <br>
+      </font></b><b><font size=4> null-command -</font></b> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> 
+              <dir> 
+                <dir> 
+                  <dir> 
+                    <dir> 
+                      <dir> 
+                        <dir> 
+                          <dir> <i><font size=2> delim </font></i><font
+                           face="Symbol" size=2>Þ</font> </dir>
+                        </dir>
+                      </dir>
+                    </dir>
+                  </dir>
+                </dir>
+              </dir>
+            </dir>
+          </dir>
+        </dir>
+      </dir>
+      A delimiter sent by the frontend when the backend expects a command is ignored 
+      by the backend. 
+      <P ALIGN="left">&nbsp; 
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p><table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr>
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact us</a></i> 
+                or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0" align="absmiddle"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+
+<!-- #EndTemplate --></HTML>

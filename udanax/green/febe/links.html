@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Saturday, October 03, 1998 04:19 PM -->
+<HTML><!-- #BeginTemplate "/Templates/green.dwt" -->
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" -->
+<TITLE>Links & Link Types</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#99FF99" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><B>Links 
+              and<br>
+              Link Types</B><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> <font size=6> </font>The connection that 
+      a link represents is defined by spec-sets called end-sets. Each link has 
+      three end-sets: a from-set, a to-set, and a three-set. These three end-sets 
+      are operationally the same, but by convention, links start at the from-set 
+      and end at the to-set, and have a type as defined by their three-set.<br>
+      <br>
+      Frontends create links by specifying the three end-sets and a document in 
+      which to store the link. This document is the link's home document. The 
+      address of the link within its home document is the link's global identifier. 
+      Note that the home document and end-sets of a link are completely independent. 
+      A link in a document could connect from the contents of another document 
+      to the contents of still other documents.<br>
+      <br>
+      Each link has a final, virtual property called its home-set. It is the set 
+      of all documents that store the link in their link space. This initially 
+      contains just the home document of the link, but editing and version creation 
+      operations can cause a link to exist in more than one document.<br>
+      <br>
+      <font size=4><b>Link Types<br>
+      <br>
+      </b></font>The current, unimaginative scheme for link typing simply associates 
+      each type with a tumbler address. The three-set for a quote link, for example, 
+      just contains the tumbler address associated with type &quot;quote&quot;. 
+      Below are listed the values used for the example Udanax Green system:<br>
+      <br>
+      <font size=2>&nbsp; </font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> <font size=2> jump 1.1.0.1.0.2.0.2.1<br>
+              <br>
+              quote 1.1.0.1.0.2.0.2.2<br>
+              <br>
+              footnote 1.1.0.1.0.2.0.2.3<br>
+              <br>
+              marginal note 1.1.0.1.0.2.0.2.4</font> </dir>
+          </dir>
+        </dir>
+      </dir>
+      Much more powerful conventions will completely replace this in the product 
+      release.<br>
+      <br>
+      The end-set used to designate a link's type is deliberately misnamed to 
+      escape the assumption that a type is just a symbol. The simplest improvement 
+      makes each type a document that stores a description of the uses and conventions 
+      for the given type. In a more interesting example, type &quot;quote&quot; 
+      refers to a set of documents with programs for presenting the link on a 
+      variety of displays. Thus, a frontend could present a mathematical equation 
+      as a graph, a musical score as sheet music, and digital audio as sound played 
+      on a stereo.<br>
+      <br>
+      <font size=4><b>Link Matching<br>
+      <br>
+      </b></font>Udanax Green supplies a very powerful operation for finding links. 
+      The operation takes four spec-sets as arguments: one for each end-set and 
+      one for the home-set. The arguments specify the contents within which the 
+      appropriate end-set must attach. The operation returns all links whose from-set 
+      intersects the first argument, whose to-set intersects the second argument, 
+      whose three-set intersect the third argument, and whose home-set intersects 
+      the fourth argument. The example shows the arguments used to find all the 
+      places at which author A quotes other authors (or himself):<br>
+      <br>
+      <font size=2>&nbsp; </font> 
+      <dir> 
+        <dir> 
+          <dir> 
+            <dir> <font size=2> from-set: span of author A's documents<br>
+              <br>
+              to-set the docuverse<br>
+              <br>
+              three-set: the ID that specifies the `quote' type.<br>
+              <br>
+              home-set: span of author A's documents</font> </dir>
+          </dir>
+        </dir>
+      </dir>
+      This returns all links of type `quote' that author A made from his documents 
+      to anywhere within the docuverse. In the example, links were matched based 
+      on their owner using the tumbler addressing architecture. The docuverse 
+      (i.e., no restriction) can also be expressed with an empty spec-set. By 
+      restricting the to-set to author B's documents rather than the entire docuverse, 
+      the operation would return all the places at which author A quoted author 
+      B.<br>
+      <br>
+      Note that the link matching is an operation on the Udanax Green enfiladic 
+      data structures and does NOT search through all the links in the docuverse!<br>
+      <br>
+      <font size=4><b>Link Interaction with Edits and Versions<br>
+      <br>
+      </b></font>Links interact with edit operations and versions by staying attached 
+      to the same contents, independent of their location. The chapter &quot;Addressing&quot; 
+      described the derivation of a unique identity for each byte and link in 
+      Udanax Green. Links connect to these objects rather than to the positions 
+      of the objects within documents. A consequence of this is that inserted 
+      bytes remain unconnected to links, even when inserted amidst a connected 
+      group of bytes. The end-set of the link effectively splits to only include 
+      the original characters. In the examples below, the italicized characters 
+      are in the end-set of a link.<br>
+      <br>
+      <font size=2>&nbsp; </font> 
+      <dir> 
+        <dir> <font size=2> initial text <i>This text was already here...<br>
+          <br>
+          </i> insert text <i>This text was al</i>inserted text <i>ready here...<br>
+          <br>
+          </i> rearrange text <i>This text al</i>inserted <i>was </i>text <i>ready 
+          here...</i></font> </dir>
+      </dir>
+      Consistent interaction between links and editing operations requires that 
+      the backend perform the editing operations. Frontends might be unaware of 
+      all links attached to a particular span of bytes. 
+      <P ALIGN="left">&nbsp; 
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center"> 
+        <p><table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr>
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../../gold/download/index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact us</a></i> 
+                or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0" align="absmiddle"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+
+<!-- #EndTemplate --></HTML>

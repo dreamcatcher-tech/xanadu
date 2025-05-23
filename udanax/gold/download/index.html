@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Saturday, October 03, 1998 04:19 PM -->
+<HTML><!-- #BeginTemplate "/Templates/gold.dwt" -->
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Udanax Gold Download Page</TITLE>
+<!-- #EndEditable --> 
+<meta name="Author" content="Mark S. Miller">
+<link rel=author rev=made href="mailto:markm@caplet.com" title="Mark S. Miller">
+<meta name="keywords" content="Hypertext, Xanadu, Transclude, Transclusion, Critical Discussion, Enfinade, Ent, Wid, Dsp, Orgl, Filtering, Backlinks">
+<meta name="description" content="Udanax.com: Enfiladic Hypertext">
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFCC" LINK="#0000FF" VLINK="#800080">
+<P> 
+<TABLE BORDER="0" width="100%">
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <P> 
+      <TABLE BORDER="0" WIDTH="100%">
+        <TR> 
+          <TD ALIGN="LEFT"><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></TD>
+          <TD ALIGN="RIGHT"> 
+            <P ALIGN="RIGHT"><FONT SIZE="7"><!-- #BeginEditable "BigTitle" --><FONT SIZE="7"><B>Download<br>
+              Udanax Gold</B></FONT><!-- #EndEditable --></FONT> 
+          </TD>
+        </TR>
+      </TABLE>
+      <hr>
+      <!-- #BeginEditable "LongBody" --> 
+      <h1 ALIGN="center"><i>Opening Date not yet set</i></h1>
+      <P ALIGN="left">The files available for download from this page are covered 
+        by <a href="../../license.html">The Udanax Open-Source License</a>, which 
+        you may want to read before proceeding. 
+      <P ALIGN="left">The two download files, <a href="udanax-top.st">udanax-top.st</a> 
+        and <a href="udanax-spaces.st">udanax-spaces.st</a>, are not yet usable 
+        without heroic effort. They are in the form of Smalltalk fileouts from 
+        a ParcPlace 2.5a Smalltalk system heavily modified by us. In particular, 
+        we enhanced the system to automatically translate from a modified subset 
+        of Smalltalk, which we called XTalk, to a corresponding heavily macro-ized 
+        subset of C++ we called X++. This Smalltalk fileout came from this modified 
+        system, and will not filein to a normal Smalltalk system without a lot 
+        of work. 
+      <P ALIGN="left"> 
+      <ul>
+        <li> 
+          <p><a href="udanax-top.st">udanax-top.st</a> contains all the Smalltalk 
+            code for the backend which was shared by translation between the Smalltalk/XTalk 
+            environment and C++/X++ environment. In particular, all the Ent data 
+            structures and algorithms are here.</p>
+        </li>
+        <li><p><a href="udanax-spaces.st">udanax-spaces.st</a> contains the most 
+          interesting self-contained subset of udanax-top.st -- the coordinate 
+          space system. This set of abstractions should have wide applicability 
+          outside of hypertext. Indeed, the IntegerSpaces from Udanax Gold have 
+          already been incorporated into the <a href="http://www.erights.org">E</a> 
+          language.</p></li>
+        <li><p><a href="xugold.tar">xugold.tar</a> (33MB) contains the C++ backend
+            as a whole. This can be read and run without intellectual
+            property problems, or major technical problems. However, since
+            major portions of it are the result of automatic translation
+            from Smalltalk, this code is not maintainable. Think of
+            these portions as compiler output (though it's not quite
+            that bad).</p></li>
+      </ul>
+      <p>Remaining pieces that will be posted soon:</p>
+      <p> 
+      <ul>
+        <li> 
+          <p>The C++ macros, tools, and libraries for turning C++ into X++. This 
+            includes</p>
+          <ul>
+            <li>A non-conservative incremental generational collector for C++</li>
+            <li>A transactional persistent object system for C++ object groups</li>
+            <li> 
+              <p>A proxy/stub generator for remote method invocation, with a message 
+                pipelining of much influence on the <a href="http://www.agorics.com/joule.html">Joule</a> 
+                and <a href="http://www.erights.org">E</a> languages.</p>
+            </li>
+          </ul>
+        <li> 
+          <p>Corresponding Smalltalk tools and libraries for turning Smalltalk 
+            into the semantically matching XTalk, including</p>
+          <ul>
+            <li>A similar persistent object system</li>
+            <li>A similar stub generator.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>More difficult to extract and post, because of the intellectual property 
+        entanglements explained <a href="../index.html">here</a>, is</p>
+      <p>
+        <ul>
+          <li>
+            <p>The &quot;Browser Hacks&quot;, an extensive set of enhancements 
+              to the Smalltalk browsing environment, enabling one to manipulate 
+              a large body of code with an ease none of us have experienced since. 
+              Fortunately, none of the rest of the system depends on these browser 
+              hacks. </p>
+          </li>
+          <li>The Smalltalk-to-C++ (or XTalk-to-X++) translator itself. Most of 
+            this is un-entangled new code, but some crucial pieces are entangled.</li>
+        </ul>
+      </p>
+      <!-- #EndEditable --></TD>
+    <TD WIDTH="10%">&nbsp;</TD>
+  </TR>
+  <TR VALIGN="TOP"> 
+    <TD WIDTH="10%">&nbsp;</TD>
+    <TD> 
+      <hr>
+      <div align="center">
+<p><table cellpadding="6" dwcopytype="CopyTableRow">
+          <tr>
+            <td><a href="../../index.html"><img src="../../images/logo.gif" width="32" height="32" align="bottom" border="0"></a></td>
+            <td> 
+              <table border="1" cellpadding="6">
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../../green/index.html">green</a></td>
+                  <td bgcolor="#FFFFCC"><a href="../index.html">gold</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../FAQ.html">FAQ</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../discussion/index.html">discussion</a></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#99FF99"><a href="../../green/download/index.html">download</a></td>
+                  <td bgcolor="#FFFFCC"><a href="index.html">download</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../history/index.html">history</a></td>
+                  <td bgcolor="#DDCCEE"><a href="../../related.html">Related Sites</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td> 
+              <div align="left"><i><a href="../../contact.html">contact us</a></i> 
+                or <a href="http://www.blindpay.com/crit-me-now.cgi"><img src="../../images/cmn.gif" width="98" height="21" border="0" align="absmiddle"></a> 
+              </div>
+            </td>
+            <td> 
+              <div align="right"><a href="http://www.privacy.org/ipc/"><img src="../../images/key.gif" width="37" height="19" alt="Golden Key" border="0"></a>&nbsp;<a href="http://mirrors.yahoo.com/eff/blueribbon.html"><img src="../../images/ribbon.gif" width="18" height="30"
+alt="Blue Ribbon" border="0"></a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD>
+    <td width="10%" valign="bottom">&nbsp;</td>
+  </TR>
+</TABLE>
+</BODY>
+
+<!-- #EndTemplate --></HTML>

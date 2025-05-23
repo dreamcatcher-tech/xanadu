@@ -209,3 +209,30 @@ Udanax Gold. ([source](gold/index.html))
 
 The reuse of content by reference to its original location so the same material
 can appear in many contexts without duplication. ([source](green/index.html))
+
+## FAQ
+
+A compilation of "Frequently Asked Questions" about the Xanadu Project that
+collects answers for new readers. ([source](../md/FAQ.md))
+
+## The Information Future
+
+An overview of Xanadu's vision for the future of
+[hypermedia](#hypermedia) publishing and how authors, readers and
+publishers might interact. ([source](../md/future.md))
+
+## The Xanadu Ideal
+
+Ted Nelson's statement of principles describing how Xanadu differs from other
+[hypertext](#hypertext) systems. ([source](../md/ideal.md))
+
+## Inforights
+
+Also known as the "Bill of Information Rights," this text proposes a framework
+for open [hypermedia](#hypermedia) publishing through contractual
+agreements. ([source](../md/inforights.md))
+
+## transcopyright
+
+A permission system proposed by Ted Nelson that allows republication of digital
+materials while tracking ownership and crediting authors. ([source](../md/transcopy.md))

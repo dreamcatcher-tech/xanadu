@@ -1,0 +1,314 @@
+# ![](/images/logo.gif)Xanadu
+
+The Information Future
+
+- One simple idea
+
+- The multimedia connection problem
+
+  - If you are an AUTHOR or ARTIST
+
+  - If you would like to READ, ROAM, EXPLORE and
+    EXPERIENCE
+
+  - If you are a PUBLISHER
+
+- The publication contract
+
+  - If you or your company would like to be a SERVICE
+    PROVIDER
+
+- How it works in detail
+
+- Freedom
+
+- Definition of terms
+
+  - Hypertext
+
+  - Hypermedia
+
+  - The repository network
+
+  - Automatic royalty
+
+  - Transpublication
+
+  - The copyright solution
+
+  - Open hypermedia publishing
+
+- Explaining it quickly
+
+## One simple idea
+
+There are many views of just what tomorrow's electronic media will be,
+and how they will reach the consumer. The Xanadu plan proposes a single
+unified world of data to which everyone will have point-and-click access
+from whatever computer, videogame or multimedia player they want to use.
+
+Think of it as a real data bank. Just as you put your money in a bank
+for safekeeping, you can put your data on the Xanadu network for
+safekeeping. And in the same way that your money can earn interest in a
+bank, your data can make money too. If anybody wants pieces of it, they
+buy it from the network and you get paid. You get paid even if other
+people use parts of it in their work. On the Xanadu network, any object
+may quote from any other, since the material quoted is bought from the
+original publisher at the time of delivery. We've succeeded in cleaning
+up the copyright problem for computer networks.
+
+Besides what individuals and publishers put in, new forms of
+interconnection and quotation are possible creating a new world of
+metamedia objects.
+
+## The multimedia connection problem
+
+Current "multi-media standards" as practiced by the industry are built
+on a closed-unit philosophy, whereby multimedia objects are
+encapsulations that do not allow interconnection between documents.
+This is a dead-end world.
+
+Xanadu structure is built for OPEN HYPERMEDIA
+PUBLISHING, allowing free interconnection among documents. Every
+author of a new document is free to connect to previous documents,
+including quotation, without pre-arrangement or advance payment.
+
+### If you are an AUTHOR or ARTIST:
+
+You can make your work available with very little difficulty -- whether
+it's poetry or a novel; photography, music or movies; or some new medium
+you have invented. As long as it's digital, you can publish it yourself
+on Xanadu at a small cost (depending on the medium and how much computer
+storage space it takes). Or you can give the job of publishing and
+marketing your work to someone else.
+
+Once your materials are on the network, anyone with a modem can buy a
+copy and make connections to it that make it even more interesting or
+useful for others. Each time material from your document or object is
+bought by anybody, you can get a royalty on that fragment.
+
+### If you would like to READ, ROAM, EXPLORE and
+
+EXPERIENCE:
+
+All you will need will be your computer, a modem or other network
+connection and a Xanadu exploration program, then you simply sign up for
+an account with your preferred Xanadu service
+provider. Different service providers will offer different
+conveniences. One may be near your home. Another may offer better
+prices or a special deal you like. Many will be on the Internet. But
+as soon as you connect to one service provider, YOU HAVE ACCESS TO
+WHAT'S ON ALL OF THEM.
+
+Now, starting anywhere, you can point and click, sending for text,
+graphics, music and audio, photographs, movies and everything else in
+the ever-expannding world of Xanadu literature. You pay for whatever
+you retrieve, but you need only buy those parts you find interesting or
+useful. To help you do this,information will be available to you about
+the author, type and price of a document. Also available will be reviews
+by others, electronic "dust jackets", advertising summaries with
+quotations prepared by the publishers themselves. There is no
+distinction between just looking at a document and saving it since
+anyone with a modem can save whatever is sent. Therefore, the user is
+free to keep a copy of what has been looked at, but the price for this
+is low.
+
+A user may simultaneously read and publish like users on electronic
+forums. But in our system there are no boundaries to forums or
+discussion groups, royalty is built in and links among documents are
+part of the docuverse.
+
+### If you are a PUBLISHER:
+
+The publisher is the person or company that takes responsibility for the
+contents of the published material. In the paper world, the publisher
+often arranges for the production of a work, its manufacture (as a book
+or other physical object) and for the marketing and distribution. In
+return the publisher collects a percentage of the profits. It is much
+the same in the Xanadu world. The publisher is the person or company
+that signs the deal with a Xanadu service provider. The publisher will
+still need to perform all of the usual functions including marketing,
+but Xanadu will now perform in essence the manufacture and distribution
+functions.
+
+## The publication contract
+
+Just as a paper publisher contracts with a printer, a Xanadu publisher
+contracts with a Xanadu service provider. A formal contract is signed
+arranging payment for storage and other aspects. If you are the
+publisher, you are responsible for avoiding publishing material you do
+not own or that violates the law or rights of others who may sue you.
+As a publisher you agree to abide by the laws. You agree to pay in
+advance for at least three years' storage of your material in three
+places for safety. Publishers pay for storage, users pay for delivery.
+You also agree to permit others to make links or transclusions
+(quotation pointers) to your document.
+
+As the publisher, you decide the amount of royalty and you receive
+whatever royalties are paid by users of your document on the network.
+You must then distribute these royalties to participating authors or
+others with whom you have made payment commitments.
+
+### If you or your company would like to be a SERVICE
+
+PROVIDER:
+
+The Xanadu network will have many service providers of all kinds and
+sizes, ranging from individuals publishing the work of a small town or
+neighborhood to huge telephone companies. There will be many ways to
+participate and many ways to compete or find a particular niche in the
+market. All supply the same basic service. All Xanadu service
+providers will use a common system of software and supply material on
+request by users, forming one great common pool.
+
+## How it works in detail
+
+Think of the Xanadu network as a single place for storing and publishing
+electronic documents and selling digital objects with interconnections
+and new objects made from them. The Xanadu network is not necessarily
+physically connected, but an affiliation of centres whose server
+computers behave as a single entity using the Xanadu publication method.
+These are run by companies and individuals who choose to be service
+providers using the shared method.
+
+ALL MATERIAL IS ONE
+All the contents on all of the Xanadu storage servers act as a
+single pool. You can send for any part of any document or link to or
+quote any part of any document.
+
+THE REQUESTS FAN OUT
+Users ask for pieces of documents and objects. A request is
+received by the user's session node which fans it out to wherever the
+material is.
+
+AND THE PAYMENTS COME BACK
+The user's payment is correspondingly sent to those publishers
+involved with the transaction.
+
+## Freedom
+
+People are free to read anything. Xanadu creates a point-and-click
+universe with user freedom.
+
+All hypertext jumps are reversible. Under other systems the reader is
+often tunnelled into reading in only one direction on any given
+document. We believe the reader must always be free to go back, turn
+the page, fast-forward or access the original document of a quote.
+
+The system will not keep records of who sends for what; otherwise
+reading becomes a political act.
+
+People will be free to jump into a document at any place and use it
+according to their own preferences.
+
+## Definition of terms
+
+HYPERTEXT
+The computer screen makes new forms of writing possible that are not
+sequential. "Hypertext," a term coined by us, mean non-sequential
+writing for the computer screen (our term "hypertext" is now in wide
+popular usage).
+
+HYPERMEDIA
+"Hypermedia," another of our terms, extends the hypertext concept to
+sound, video and computer graphics. Multimedia presentations where the
+user may branch and explore have now become recognised as an exciting
+new educational and artistic medium. The Manhole, Virtual Valerie and
+Carmen Sandiego are among titles already popular in this area. CD-I and
+3DO are among the hardware players being fielded. Some use the term
+"interactive multimedia," but it is indeed the same thing as hypermedia.
+
+THE REPOSITORY NETWORK
+We think the future goes far beyond hardware players and plastic
+disks. Tomorrow's publishing for computer screens will be principally
+over networks. Xanadu has been planned from the beginning as a network
+for delivery of copyrighted media to users on demand.
+
+AUTOMATIC ROYALTY
+Our copyright solution has always been for the user to pay a small
+royalty to the media publisher for every byte sent. Instead of buying
+whole documents, this allows the user continually to pick and choose on
+line. This is necessary in a hypermedia world, since the user will
+typically not buy whole publications, but move and ramble unpredictably.
+The royalty is paid automatically at the instant of delivery, only and
+exactly for the portion sent.
+
+TRANSPUBLICATION
+This in turn means that any publisher in our system may quote any
+other publisher freely since the "quotation" is a pointer to the
+original publication. The user automatically sends for the quotation
+from the original publisher, paying the royalty to the original
+publisher.
+
+Material which is virtually included in this way, from one document to
+another, we call transcluded, and this form of quoting in a new
+published document we call transpublication.
+
+Anyone is free to transpublish anything since it still belongs to the
+original publisher and stays in the original publisher's storage space.
+And the original publisher gets the royalty on the portions which are
+transpublished.
+
+THE COPYRIGHT SOLUTION
+For all participants within the Xanadu network, this cleans up the
+copyright issue:
+
+- Nothing is misquoted.
+
+- Nothing is quoted out of context (since original context is
+  immmediately available: the customer has the address of the portion in
+  its original setting).
+
+- Royalty is automatic to the original publisher.
+
+- Credit is automatic to the original author or authors.
+
+Everything may be freely re-used and quoted anywhere in our network in
+this manner. Its publication on our network includes permission for
+this arrangement.
+
+We believe this will be the universal solution to the copyright issue in
+our time and that others operating in this computer multimedia area do
+not yet understand this.
+
+OPEN HYPERMEDIA PUBLISHING
+We call the whole system of publication "open hypermedia publishing"
+because anyone can link to, and re-use, materials of any kind throughout
+the network. We believe that Xanadu Open Hypermedia Publishing is the
+publishing medium of the future, combining all forms of media -- text,
+graphics, audio and music, video, simulations, data structures -- into
+tomorrow's new information world.
+
+## Explaining it quickly
+
+- Xanadu is a system for the network sale of documents with automatic
+  royalty on every byte.
+
+- The transclusion feature allows quotation of fragments of any size
+  with royalty to the original publisher.
+
+- This is an implementation of a connected literature.
+
+- It is a system for a point-and-click universe.
+
+- This is a completely interactive docuverse.
+
+---
+
+"Xanadu: The Information Future" was compiled from the writings of Ted
+Nelson by Katherine Phelps of Xanadu Australia, PO Box 4234,
+Croydon Hills VIC 3136, Australia. Email:
+[xanni@xanadu.com.au](mailto:xanni@xanadu.com.au).
+"Xanadu" is a trade and service mark of Xanadu On-Line
+Publishing, 3020 Bridgeway #295, Sausalito CA 94965 USA. Copyright (c)
+1994 Xanadu Australia and Xanadu On-Line Publishing.
+
+[download](green/download/index.html)
+[download](gold/download/index.html)
+[history](history/index.html)
+[Related Sites](related.html)
+
+_[contact us](contact.html)_
+or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
+
+[![Golden Key](images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

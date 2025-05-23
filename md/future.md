@@ -171,17 +171,20 @@ computers behave as a single entity using the Xanadu publication method.
 These are run by companies and individuals who choose to be service
 providers using the shared method.
 
-ALL MATERIAL IS ONE
+### All material is one
+
 All the contents on all of the Xanadu storage servers act as a
 single pool. You can send for any part of any document or link to or
 quote any part of any document.
 
-THE REQUESTS FAN OUT
+### The requests fan out
+
 Users ask for pieces of documents and objects. A request is
 received by the user's session node which fans it out to wherever the
 material is.
 
-AND THE PAYMENTS COME BACK
+### And the payments come back
+
 The user's payment is correspondingly sent to those publishers
 involved with the transaction.
 
@@ -203,13 +206,15 @@ according to their own preferences.
 
 ## Definition of terms
 
-HYPERTEXT
+### Hypertext
+
 The computer screen makes new forms of writing possible that are not
 sequential. "Hypertext," a term coined by us, mean non-sequential
 writing for the computer screen (our term "hypertext" is now in wide
 popular usage).
 
-HYPERMEDIA
+### Hypermedia
+
 "Hypermedia," another of our terms, extends the hypertext concept to
 sound, video and computer graphics. Multimedia presentations where the
 user may branch and explore have now become recognised as an exciting
@@ -218,13 +223,15 @@ Carmen Sandiego are among titles already popular in this area. CD-I and
 3DO are among the hardware players being fielded. Some use the term
 "interactive multimedia," but it is indeed the same thing as hypermedia.
 
-THE REPOSITORY NETWORK
+### The repository network
+
 We think the future goes far beyond hardware players and plastic
 disks. Tomorrow's publishing for computer screens will be principally
 over networks. Xanadu has been planned from the beginning as a network
 for delivery of copyrighted media to users on demand.
 
-AUTOMATIC ROYALTY
+### Automatic royalty
+
 Our copyright solution has always been for the user to pay a small
 royalty to the media publisher for every byte sent. Instead of buying
 whole documents, this allows the user continually to pick and choose on
@@ -233,7 +240,8 @@ typically not buy whole publications, but move and ramble unpredictably.
 The royalty is paid automatically at the instant of delivery, only and
 exactly for the portion sent.
 
-TRANSPUBLICATION
+### Transpublication
+
 This in turn means that any publisher in our system may quote any
 other publisher freely since the "quotation" is a pointer to the
 original publication. The user automatically sends for the quotation
@@ -249,7 +257,8 @@ original publisher and stays in the original publisher's storage space.
 And the original publisher gets the royalty on the portions which are
 transpublished.
 
-THE COPYRIGHT SOLUTION
+### The copyright solution
+
 For all participants within the Xanadu network, this cleans up the
 copyright issue:
 
@@ -271,7 +280,8 @@ We believe this will be the universal solution to the copyright issue in
 our time and that others operating in this computer multimedia area do
 not yet understand this.
 
-OPEN HYPERMEDIA PUBLISHING
+### Open hypermedia publishing
+
 We call the whole system of publication "open hypermedia publishing"
 because anyone can link to, and re-use, materials of any kind throughout
 the network. We believe that Xanadu Open Hypermedia Publishing is the

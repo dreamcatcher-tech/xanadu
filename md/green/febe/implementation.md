@@ -197,8 +197,9 @@ will show where rearranged material is now appearing in the
 document.
 
 **Versions
+**
 
-**[]()Besides links, there are three
+Besides links, there are three
 other key
 features of the Udanax Green implementation: versions, unbounded
 information
@@ -267,11 +268,9 @@ If some years from now many Udanax Green systems were to be
 interconnected,
 no confusion would result.
 
-**
+**Cooperating Users**
 
-Cooperating Users
-
-**[]()Existing and planned features are
+Existing and planned features are
 designed
 to make Udanax Green good at enhancing the diversity that results
 from "social"

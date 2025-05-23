@@ -1,13 +1,6 @@
-The Udanax Open Source License
-
-
-
 [![](images/logo.gif)](index.html)
 
-**The
-U****danaxTM
-
-Open-Source License**
+**The Udanax Open-Source License**
 
 ---
 
@@ -64,8 +57,8 @@ and the transcluded-U logo shall not be used in advertising or otherwise
 to promote the sale, use or other dealings in this Software without
 prior written authorization from Udanax.com.
 
-UdanaxTM, Udanax.comTM,
-and the transcluded-U logo (![](images/logo.gif)TM)are
+Udanax, Udanax.com,
+and the transcluded-U logo (![](images/logo.gif)) are
 trademarks of Udanax.com (formerly "XOC" or "Xanadu
 Operating Company").
 

@@ -545,7 +545,6 @@ and the session was terminated.
 
 **be:** Sure, goodbye.
 
-[]()16~
 
 
 

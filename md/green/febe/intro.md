@@ -1,6 +1,3 @@
-FeBe Introduction
-
-
 
 [![](../../images/logo.gif)](../../index.html)
 

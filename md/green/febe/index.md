@@ -1,13 +1,6 @@
-FeBe Green Protocol
-
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Udanax
-Green
-
-Febe Protocol**
+**Udanax Green Febe Protocol**
 
 ---
 

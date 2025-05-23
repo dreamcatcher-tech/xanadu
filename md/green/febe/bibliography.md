@@ -1,6 +1,3 @@
-Bibliography
-
-
 
 [![](../../images/logo.gif)](../../index.html)
 
@@ -8,7 +5,6 @@ Bibliography
 
 ---
 
-[]()Bibliography
 
 Bush 45 *As We May
 Think

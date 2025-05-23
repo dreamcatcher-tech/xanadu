@@ -3,7 +3,7 @@
     "fmt": "prettier --write '**/*.md'",
     "fmt:check": "prettier '**/*.md' --check",
     "links": "linkinator '**/*.md' --markdown --skip '(https?:|mailto:|tel:)' --skip '/node_modules/'",
-    "anchors": "markdownlint-cli2 '**/*.md'",
+    "anchors": "node scripts/check-anchors.js",
     "ok": "npm run fmt:check && npm run links && npm run anchors"
   },
   "dependencies": {

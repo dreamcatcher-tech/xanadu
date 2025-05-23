@@ -8,7 +8,7 @@ users' [documents](#document). Users can have multiple accounts.
 
 ## Be
 
-Short for [backend](#backends). ([source](green/febe/glossary.html))
+Short for [backend](#backend). ([source](green/febe/glossary.html))
 
 ## backend
 

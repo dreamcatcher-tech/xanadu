@@ -232,7 +232,64 @@ Also known as the "Bill of Information Rights," this text proposes a framework
 for open [hypermedia](#hypermedia) publishing through contractual
 agreements. ([source](../md/inforights.md))
 
+## automatic royalty
+
+The policy that each byte delivered from a publication triggers a small
+royalty payment to the original publisher. ([source](external/future.html))
+
+## connected literature
+
+An interconnected network of documents enabled by
+[transclusion](#transclusion), allowing readers to traverse a shared
+[docuverse](#docuverse). ([source](external/future.html))
+
+## context relinquishment
+
+The practice of permitting a work to appear in unpredictable contexts in
+exchange for royalty and credit. ([source](external/transcopy.html))
+
+## hypernaut
+
+A reader exploring the Xanadu universe through following links from document to
+document. ([source](external/inforights.html))
+
+## open hypermedia publishing
+
+Xanadu's approach where anyone may link to and re-use materials across the
+network, combining all media forms. ([source](external/future.html))
+
+## receipt token
+
+A record provided to users so they can prove what material they have purchased
+and stored. ([source](external/inforights.html))
+
+## repository network
+
+The networked storage and delivery system planned for Xanadu to distribute
+copyrighted media on demand. ([source](external/future.html))
+
+## transpublication
+
+Publishing by reference so quoted material is fetched from its original
+publisher, who receives the royalty. ([source](external/future.html))
+
+## virtual republication
+
+Republishing digital material by transmitting a purchase address instead of the
+bytes themselves. ([source](external/transcopy.html))
+
+## World Publishing Repository
+
+Ted Nelson's term for the Xanadu system envisioned as a universal bookstore
+built around links rather than text search. ([source](external/ideal.html))
+
+## Xanadu paradigm
+
+The overarching model for computing based on sideways connections among
+documents, enabling open electronic publishing. ([source](external/faq.html))
+
 ## transcopyright
 
 A permission system proposed by Ted Nelson that allows republication of digital
 materials while tracking ownership and crediting authors. ([source](../md/transcopy.md))
+

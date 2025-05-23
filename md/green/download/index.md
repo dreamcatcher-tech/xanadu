@@ -1,9 +1,5 @@
 Udanax Green Download Page
 
-
-
-
-
 [![](../../images/logo.gif)](http://www.udanax.com/index.html)
 
 **Download**
@@ -20,8 +16,7 @@ can be downloaded from [udanax-1999-09-29.tar.gz](udanax-1999-09-29.tar.gz)
 (a gzipped tar file)
 .
 
--
-Under Unix/Linux, the .tar.gz file can be unpacked by saying
+- Under Unix/Linux, the .tar.gz file can be unpacked by saying
 
 % tar xzf udanax-1999-09-29.tar.gz
 Under MSWindows, the shareware [WinZip](http://www.winzip.com/)
@@ -39,13 +34,7 @@ You will then want to download and unpack the 2005/2006 updates:
 (For historical interest, [udanax-oldfen.tar.gz](udanax-oldfen.tar.gz)
 is an old frontend written in C for the NeXT platform.)
 
-
-
-
-
 ---
-
-
 
 [![](../../images/logo.gif)](../../index.html)
 
@@ -66,7 +55,7 @@ is an old frontend written in C for the NeXT platform.)
 [Related
 Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/)[![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

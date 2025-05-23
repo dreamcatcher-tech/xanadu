@@ -1,7 +1,5 @@
 FeBe Example
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
 **FeBe
@@ -41,24 +39,22 @@ from the backend by a line beginning with
 
 The session consisted of:
 
-* bringing up the frontend and backend in the single
-user configuration
-on the standard example data structure file. (See the [man-pages](man-pages.html)
-"backend(L)" and "intf(L)" in Appendix
-C.)
+- bringing up the frontend and backend in the single
+  user configuration
+  on the standard example data structure file. (See the [man-pages](man-pages.html)
+  "backend(L)" and "intf(L)" in Appendix
+  C.)
 
-* the frontend starting, displaying a particular start
-document
-(referred to as Document A in the rest of this
-chapter),
+- the frontend starting, displaying a particular start
+  document
+  (referred to as Document A in the rest of this
+  chapter),
 
-* the user following a link from Document A to the
-document at the
-other end of that link (Document B), and
+- the user following a link from Document A to the
+  document at the
+  other end of that link (Document B), and
 
-* the user quitting.
-
-
+- the user quitting.
 
 The first thing the frontend and backend did was check whether
 they spoke
@@ -74,8 +70,8 @@ P0~
 
 Note that the lines right below "**fe:**" and
 "**be:**"
-were new-line characters (denoted by the symbol `')_
-_that were sent in the messages.
+were new-line characters (denoted by the symbol `')\_
+\_that were sent in the messages.
 
 Because the frontend wished to speak the prototype protocol, it
 indicated
@@ -93,7 +89,7 @@ the session
 terminated. There is no reason to expect that any future frontend
 or backend
 will support the prototype protocol, but future products
-*will* support
+_will_ support
 the above protocol for negotiating about what protocol they are
 speaking.)
 (See the section about metaprotocol in the man-pages
@@ -101,17 +97,15 @@ speaking.)
 and "daemon(L)" in [Appendix
 C](man-pages.html).)
 
-
-
 Having agreed that they were both speaking the prototype protocol,
 the frontend
 proceeded to open Document A:
 
-**fe:** Can I have read-access to *doc-A* or a copy?
+**fe:** Can I have read-access to _doc-A_ or a copy?
 
 35~0.1.1.0.1.0.1~1~2~
 
-**be:** You now have read-access to *doc-A* itself
+**be:** You now have read-access to _doc-A_ itself
 
 35~0.1.1.0.1.0.1~
 
@@ -150,7 +144,7 @@ defined in Appendix A: "FeBe Protocol Syntax".
 The frontend requested that the document with address 1.1.0.1.0.1 (Document
 A) be opened for reading. Addresses in Udanax Green consist of multi-part
 numbers which we call "tumblers". (See "[Addressing](addressing.html)" and "[Tumbler
-Arithmetic](tumblers.html)".) Address 1.1.0.1.0.1 is a document *id* simply
+Arithmetic](tumblers.html)".) Address 1.1.0.1.0.1 is a document _id_ simply
 known to this frontend as a good starting point (much as a home directory
 under Unix). Because many tumblers sent in the protocol may have some
 number of leading zeros, the protocol uses a compressed format in which
@@ -159,7 +153,7 @@ the rest of the digits to form the actual tumbler. For example, a `3.4.5' in the
 (see the section "Lexical Definitions" in [Appendix
 A](syntax.html)).
 
-The *copy-on-conflict* argument
+The _copy-on-conflict_ argument
 indicated to
 the backend that should it not be able to open Document A for
 this frontend
@@ -169,13 +163,11 @@ backend should instead create a new version (a virtual copy),
 and open
 it. If the backend had made and opened a copy, it would have
 returned
-the *id* of the copy. Since, in the example, the backend
+the _id_ of the copy. Since, in the example, the backend
 returned
-the original *id*, the open succeeded on the requested
+the original _id_, the open succeeded on the requested
 document.
 (See the chapter "Versions".)
-
-
 
 As seen below, the frontend next requested the first 1,500
 characters
@@ -183,7 +175,7 @@ of this document. It did so with a request of the form:
 
 ![](../images/retrieve.gif)
 
-where *vspan* represented the part of
+where _vspan_ represented the part of
 the document
 starting at 1.1 extending for 0.1500. This indicated the
 interval from
@@ -207,7 +199,7 @@ Note that the text of Document A (which follows) is a description of the
 Udanax Green Prototype Frontend commands. Also, the () immediately following `t553~' is in fact the first character of the retrieved
 document.
 
-**fe:** What's in *doc-A* starting at 1.1 for 0.1500?
+**fe:** What's in _doc-A_ starting at 1.1 for 0.1500?
 
 5~1~v~0.1.1.0.1.0.1~1~0.1.1~1.1500~
 
@@ -281,26 +273,27 @@ The prototype frontend highlighted text to which links attached.
 (See "fex(L)"
 in Appendix C.) It requested this information by: where there was
 one spec
-in the spec-set; the spec's document *id* was 1.1.0.1.0.1;
+in the spec-set; the spec's document _id_ was 1.1.0.1.0.1;
 the spec
 contained one vspan; it started at 1.1 and extended for 1. Note
 that 1.1
-+ 1 = 2, and that therefore the interval indicated was from 1.1
-inclusive
-to 2 exclusive. (This shows how tumbler arithmetic can easily
-specify infinite
-intervals: the above interval denotes the entire data space of the
-document
-no matter how big it is.) (See the chapters "Addressing"
-and "Tumbler
-Arithmetic".)
+
+- 1 = 2, and that therefore the interval indicated was from 1.1
+  inclusive
+  to 2 exclusive. (This shows how tumbler arithmetic can easily
+  specify infinite
+  intervals: the above interval denotes the entire data space of the
+  document
+  no matter how big it is.) (See the chapters "Addressing"
+  and "Tumbler
+  Arithmetic".)
 
 **fe:** What are all the end-sets in the data space of
-*doc-A*?
+_doc-A_?
 
 28~1~v~0.1.1.0.1.0.1~1~0.1.1~0.1~
 
-** be:** One from-set in *doc-A* starting at
+** be:** One from-set in _doc-A_ starting at
 1.504 for
 0.49, one to-set starting at 1.2 for 0.6, no three-set
 
@@ -318,7 +311,7 @@ To see if there was any more data in Document A to be retrieved,
 the frontend
 sent the request:
 
-**fe:** How big are the spaces in *doc-A*?
+**fe:** How big are the spaces in _doc-A_?
 
 1~0.1.1.0.1.0.1~
 
@@ -330,38 +323,38 @@ Essentially, the backend said that Document A contained 553
 characters and
 no links. If the document had contained any links, then the
 response would
-have been of the form: where one of the *vspans* would have
+have been of the form: where one of the _vspans_ would have
 indicated
-the span starting at 2.1 for 0.*number-of-links*.
+the span starting at 2.1 for 0._number-of-links_.
 
 Back to our example: the user of the frontend had just moved to
 character
 513 and hit the follow-link button. Character 513 was within the
 from-set
-of some link (as was known from the above *retrieve-endsets*
+of some link (as was known from the above _retrieve-endsets_
 request).
 The frontend needed to follow that link, so it had to determine
 what link
 or links contained that character as an end-set. It did this with
 the request:
-, where *spec-set**from
+, where *spec-set\*\*from
 *was: , or, the single character at location 513 in the
 document.
 The other spec-sets were empty, which indicated no
 match-restrictions there.
 
 **fe:** What are all the links from position 513 of
-*doc-A*
+_doc-A_
 
 30~1~v~0.1.1.0.1.0.1~1~0.1.513~1.1~0~0~0~
 
-**be:** Just one: link *id* 1.1.0.1.0.2.0.2.22
+**be:** Just one: link _id_ 1.1.0.1.0.2.0.2.22
 
 30~1~0.1.1.0.1.0.2.0.2.22~
 
 The backend responded with: indicating that the links that matched
 the above
-query consisted solely of the link with *id*
+query consisted solely of the link with _id_
 1.1.0.1.0.2.0.2.22. This
 was the twenty-second link in the link-space of document
 1.1.0.1.0.2 (see
@@ -378,7 +371,7 @@ sending:
 
 18~3~0.1.1.0.1.0.2.0.2.22~
 
-**be:** It is attached to the first link of *doc-B*
+**be:** It is attached to the first link of _doc-B_
 
 18~1~v~0.1.1.0.1.0.2~1~0.2.1~1.1~
 
@@ -395,7 +388,7 @@ Then the frontend inquired about the to-end of the same link:
 
 18~2~0.1.1.0.1.0.2.0.2.22~
 
-**be:** To the first fifty-seven characters of *doc-B*
+**be:** To the first fifty-seven characters of _doc-B_
 
 18~1~v~0.1.1.0.1.0.2~1~0.1.1~1.57~
 
@@ -411,11 +404,11 @@ as for Document A.
 
 First we opened it:
 
-**fe:** Can I have read-access to *doc-B* or a copy?
+**fe:** Can I have read-access to _doc-B_ or a copy?
 
 35~0.1.1.0.1.0.2~1~2~
 
-**be:** You now have read-access to *doc-B* itself
+**be:** You now have read-access to _doc-B_ itself
 
 35~0.1.1.0.1.0.2~
 
@@ -423,7 +416,7 @@ Then we asked for the first 1500 characters. As before, this
 document contained
 less than 1500 characters - in this case, 875.
 
-**fe:** What are in the first 1500 locations of *doc-B*?
+**fe:** What are in the first 1500 locations of _doc-B_?
 
 5~1~v~0.1.1.0.1.0.2~1~0.1.1~1.1500~
 
@@ -506,7 +499,7 @@ Bizplan8
 Then the frontend did a for the data space of the document:
 
 **fe:** What are all the end-sets in the data space of
-*doc-B*?
+_doc-B_?
 
 28~1~v~0.1.1.0.1.0.2~1~0.1.1~0.1~
 
@@ -521,12 +514,12 @@ Then the frontend did a for the data space of the document:
 
 The backend responded with: where:
 
-*spec-set**from* is:*
-*`1~' * [`v~'* iddoc-B *`31~'* [*vspan*]]
+_spec-set\*\*from_ is:\*
+_`1~' _ [`v~'* iddoc-B *`31~'* [*vspan\*]]
 
-*spec-setto* is:* *`1~' * [`v~'* iddoc-B *`6~'* [*vspan*]]
+_spec-setto_ is:\* _`1~' _ [`v~'* iddoc-B *`6~'* [*vspan\*]]
 
-*spec-setthree* is:* *`1~' * [`v~'* iddoc-B *`5~'* [*vspan*]]
+_spec-setthree_ is:\* _`1~' _ [`v~'* iddoc-B *`5~'* [*vspan\*]]
 
 This response informed the frontend of the thirty-one spans in Document
 B which were in the from-space of some link, the six spans which were in
@@ -545,11 +538,6 @@ and the session was terminated.
 
 **be:** Sure, goodbye.
 
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -564,7 +552,7 @@ and the session was terminated.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

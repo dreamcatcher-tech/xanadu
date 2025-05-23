@@ -1,7 +1,5 @@
 CritMail Discussion of Udanax Hypertext
 
-
-
 [![](../images/logo.gif)](../index.html)
 
 **
@@ -14,10 +12,6 @@ It's open too. Please join.
 [subscribe to automated list](mailto:udanax-subscribe@udanax.com)
 
 [Online archive of Udanax developer mailing list](http://www.xanadu.com.au/mail/udanax/)
-
-
-
-
 
 ---
 
@@ -33,7 +27,7 @@ It's open too. Please join.
 [history](../history/index.html)
 [Related Sites](../related.html)
 
-*[contact us](../contact.html)*
+_[contact us](../contact.html)_
 or [![](../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

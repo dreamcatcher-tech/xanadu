@@ -1,12 +1,10 @@
 Philosophy & Motivation
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Philosophy
+\*\*Philosophy
 
-and Motivation**
+and Motivation\*\*
 
 ---
 
@@ -68,9 +66,9 @@ a physical trace of complex web of context. Hypertext software
 lets us weave
 that web.
 
-**Xanadu & Udanax
+\*\*Xanadu & Udanax
 
-**Xanadu began in 1960 with Ted Nelson's simple
+\*\*Xanadu began in 1960 with Ted Nelson's simple
 definition of hypertext
 as "non-sequential writing": text that branches and
 allows choices
@@ -81,17 +79,17 @@ philosophies
 and motivations drove the technical design of the Udanax. They
 explain:
 
-* some of our unusual technical choices
+- some of our unusual technical choices
 
-* our intent in creating a particular capability
+- our intent in creating a particular capability
 
-* the sometimes surprising absence of features standard in
-other
-software
+- the sometimes surprising absence of features standard in
+  other
+  software
 
-**Importance of Context and Complexity
+\*\*Importance of Context and Complexity
 
-**The basis of Udanax hypertext's design is that
+\*\*The basis of Udanax hypertext's design is that
 information is
 complex, and all information is embedded in a context that gives
 it meaning.
@@ -147,9 +145,9 @@ we very much need ways to preserve context, and to build webs of
 relationship
 where no technology now exists to do so.
 
-**A Medium for Multimedia
+\*\*A Medium for Multimedia
 
-**Information exists in a variety of forms and formats:
+\*\*Information exists in a variety of forms and formats:
 text, film,
 music, graphics, charts and more. Varied as the formats might be,
 the information
@@ -173,9 +171,9 @@ of interconnected information it can support. Udanax Green can
 support this
 limitless interconnection.
 
-**The Value of Diversity
+\*\*The Value of Diversity
 
-**Another key philosophical building block for us is the
+\*\*Another key philosophical building block for us is the
 value
 of diversity, the richness that comes from pluralism and freedom
 of choice.
@@ -211,12 +209,6 @@ of knowledge. The social interaction that hypertext supports
 allows maximum
 diversity to coexist and cross-fertilize.
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -231,7 +223,7 @@ diversity to coexist and cross-fertilize.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

@@ -1,13 +1,11 @@
 Home of Udanax Green
 
-
-
 [![](../images/logo.gif)](../index.html)
 
-**Udanax
+\*\*Udanax
 Green
 
-Global transclusive address space**
+Global transclusive address space\*\*
 
 ---
 
@@ -50,15 +48,11 @@ connections identified.
 ![](images/transpoint.gif)
 
 Others have used hypertext to tell the same story of the versions of
-the Declaration of Independence. See *[The
-Hypertext Declaration of Independence](http://www.duke.edu/eng169s2/group1/lex3/hyprdecl.htm)* and *[The
-Unanimous Declaration ...](http://odur.let.rug.nl/%7Eusa/D/1776-1800/independence/doi.htm)*. Note however, that changes between
+the Declaration of Independence. See _[The
+Hypertext Declaration of Independence](http://www.duke.edu/eng169s2/group1/lex3/hyprdecl.htm)_ and _[The
+Unanimous Declaration ...](http://odur.let.rug.nl/%7Eusa/D/1776-1800/independence/doi.htm)_. Note however, that changes between
 the documents in these are manually entered as links and that it is difficult
 to easily compare versions.
-
-
-
-
 
 ---
 
@@ -74,7 +68,7 @@ to easily compare versions.
 [history](../history/index.html)
 [Related Sites](../related.html)
 
-*[contact us](../contact.html)*
+_[contact us](../contact.html)_
 or [![](../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

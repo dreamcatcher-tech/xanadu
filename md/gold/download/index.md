@@ -1,16 +1,14 @@
 Udanax Gold Download Page
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Download
+\*\*Download
 
-Udanax Gold**
+Udanax Gold\*\*
 
 ---
 
-# *Opening Date not yet set*
+# _Opening Date not yet set_
 
 The files available for download from this page are covered
 by [The Udanax Open-Source License](../../license.html), which
@@ -90,11 +88,7 @@ Fortunately, none of the rest of the system depends on these browser
 hacks.
 
 - The Smalltalk-to-C++ (or XTalk-to-X++) translator itself. Most of
-this is un-entangled new code, but some crucial pieces are entangled.
-
-
-
-
+  this is un-entangled new code, but some crucial pieces are entangled.
 
 ---
 
@@ -110,7 +104,7 @@ this is un-entangled new code, but some crucial pieces are entangled.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

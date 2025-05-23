@@ -1,19 +1,17 @@
 Appendix B - Useful Tables
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Appendix
+\*\*Appendix
 B
 
-Useful Tables**
+Useful Tables\*\*
 
 ---
 
-** Commands by number Commands by name;
+\*\* Commands by number Commands by name;
 
-**0 insert close 36
+\*\*0 insert close 36
 
 1 retrieve-doc-vspanset copy 2
 
@@ -53,12 +51,6 @@ Useful Tables**
 
 38 create-node-or-account x-account 34
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -73,7 +65,7 @@ Useful Tables**
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

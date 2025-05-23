@@ -1,20 +1,14 @@
 FAQ (Frequently Asked Questions)
 
-
-
 [![](images/logo.gif)](index.html)
 
-**FAQ
+\*\*FAQ
 
-Frequently Asked Questions**
+Frequently Asked Questions\*\*
 
 ---
 
-***to be written
-
-
-
-
+\*\*\*to be written
 
 ---
 
@@ -30,7 +24,7 @@ Frequently Asked Questions**
 [history](history/index.html)
 [Related Sites](related.html)
 
-*[contact us](contact.html)*
+_[contact us](contact.html)_
 or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

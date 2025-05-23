@@ -1,13 +1,11 @@
 Appendix D - Glossary
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Appendix
+\*\*Appendix
 D
 
-Glossary**
+Glossary\*\*
 
 ---
 
@@ -151,12 +149,6 @@ of hypertext information pools of unbounded size.
 documents, links, and data-bytes are all objects in the
 Udanax Green address space (also called "the docuverse").
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -171,7 +163,7 @@ Udanax Green address space (also called "the docuverse").
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

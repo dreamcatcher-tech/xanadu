@@ -1,7 +1,5 @@
 Designing Frontends
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
 **Designing
@@ -72,12 +70,6 @@ the reader feel comfortable and oriented. And Udanax will supply the underlying
 hypermedia handling mechanisms, with version control for databases of global
 scale, that will make these developers' successes possible.
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -92,7 +84,7 @@ scale, that will make these developers' successes possible.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

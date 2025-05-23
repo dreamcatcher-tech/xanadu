@@ -22,7 +22,7 @@ such release is cleared with the participants of each discussion. The
 intent is not to hide any technical information, but to respect the sense
 of privacy that may have been assumed when these discussions occurred.
 Should we encounter a problem obtaining permission from the participants,
-we hope to extract and release the *technical* content anyway, as
+we hope to extract and release the _technical_ content anyway, as
 time permits.
 
 The original text of the X11 license, as applied to the
@@ -66,10 +66,6 @@ Xanadu® and the flaming-X
 logo (![](images/flaming-x.gif))
 are registered trademarks of Ted Nelson.
 
-
-
-
-
 ---
 
 [![](images/logo.gif)](index.html)
@@ -84,7 +80,7 @@ are registered trademarks of Ted Nelson.
 [history](history/index.html)
 [Related Sites](related.html)
 
-*[contact us](contact.html)*
+_[contact us](contact.html)_
 or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

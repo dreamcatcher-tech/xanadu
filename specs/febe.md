@@ -5,7 +5,7 @@ This document summarizes the FeBe Protocol used for communication between Udanax
 ## Metasyntax
 
 - Terminal symbols appear in `monospace`.
-- Non-terminal symbols are *italicized*.
+- Non-terminal symbols are _italicized_.
 - Optional sequences are in `[ ]`.
 - Repetition uses `*` or `+` after brackets.
 - Exchanges follow `call -> result | error`.
@@ -66,4 +66,3 @@ Each command is issued by the frontend and returns the command number and any re
 ## Frontend/Backend Usage
 
 Frontends use these commands to store data, retrieve contents and manage versions. Multiple frontends may communicate with the backend simultaneously. Automatic version creation resolves editing conflicts when necessary.
-

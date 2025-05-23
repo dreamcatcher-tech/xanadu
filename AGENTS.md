@@ -26,6 +26,7 @@
 - any time you use a term in the dictionary, you must link the usage of the word
   to the definition of the word using a markdown link, so that users can easily
   navigate to the dictionary definition.
+- before committing, `npm run ok` must pass without errors.
 
 ## Tips
 

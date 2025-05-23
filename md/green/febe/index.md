@@ -27,17 +27,17 @@ disclaimer
 will be removed.
 
 **[Introduction](intro.html) **
-**
+\*\*
 
 [Philosophy and Motivation](philosophy.html)
 
-** ** [Implementation](implementation.html)
+\*\* \*\* [Implementation](implementation.html)
 
-****[Designing Frontends](frontends.html)
+\*\*\*\*[Designing Frontends](frontends.html)
 
 [FeBe Example](example.html)
 
-[Technical Overview](overview.html)****
+[Technical Overview](overview.html)\*\*\*\*
 
 [Addressing](addressing.html)
 
@@ -61,11 +61,7 @@ Appendix C - [Manual Pages](man-pages.html)
 
 Appendix D - [Glossary](glossary.html)
 
-**
-
-
-
-
+\*\*
 
 ---
 
@@ -81,7 +77,7 @@ Appendix D - [Glossary](glossary.html)
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

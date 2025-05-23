@@ -1,7 +1,5 @@
 The History of Xanadu & Udanax
 
-
-
 [![](../images/logo.gif)](../index.html)
 
 **Xanadu
@@ -12,12 +10,13 @@ The History of Xanadu & Udanax
 See also [Press Coverage of Xanadu](press.html).
 
 # History of the Xanadu**®**
+
 Projects
 
-***to be written
+\*\*\*to be written
 
-Nelson's 1982 Datamation article [*A
-New Home for the Mind*](http://www.datamation.com/PlugIn/issues/bestof/xanadu.html).
+Nelson's 1982 Datamation article [_A
+New Home for the Mind_](http://www.datamation.com/PlugIn/issues/bestof/xanadu.html).
 
 # Who?
 
@@ -45,7 +44,7 @@ on.
 
 Ted Nelson, John Ridgeway, Cal Daniels -- 1972
 
-### Transclusion by Subtree Sharing & I *vs.* V
+### Transclusion by Subtree Sharing & I _vs._ V
 
 Bill Barus -- 1977 (Is this right?)
 
@@ -60,6 +59,7 @@ Roger Gregory, Mark S. Miller -- 1980
 ### Construction of Udanax Green
 
 Roger Gregory, Mark S. Miller, Eric Hill, Roland King -- 1980
+
 - 1988
 
 ### Early Udanax Green Frontends
@@ -86,6 +86,7 @@ Major architectural contributions by Michael McClary & K.
 Eric Drexler -- 1988 - 1992
 
 ### Coordinate Space System & The Reformulation of General Enfilade
+
 Theory
 
 Ravi Pandya, E. Dean Tribble, Mark S. Miller
@@ -128,13 +129,9 @@ Rob Jellinghaus, E. Dean Tribble, Eric Hill
 The most important of the systems inspired (or partially
 inspired) by Xanadu**®** is,
 obviously, the World Wide Web -- the medium on which you are presently
-reading these very pages. The 1989 document [*Information
-Management: A Proposal*](http://www.w3.org/History/1989/proposal.html) is one of Tim Berners Lee's earliest records
+reading these very pages. The 1989 document [_Information
+Management: A Proposal_](http://www.w3.org/History/1989/proposal.html) is one of Tim Berners Lee's earliest records
 of the birth of the web.
-
-
-
-
 
 ---
 
@@ -150,7 +147,7 @@ of the birth of the web.
 [history](index.html)
 [Related Sites](../related.html)
 
-*[contact us](../contact.html)*
+_[contact us](../contact.html)_
 or [![](../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

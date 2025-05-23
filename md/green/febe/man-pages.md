@@ -1,20 +1,16 @@
 Appendix C - Manual Pages
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
-**Appendix
+\*\*Appendix
 C
 
-Manual Pages**
+Manual Pages\*\*
 
 ---
 
 BACKEND(L) LOCAL COMMANDS
 BACKEND(L)
-
-
 
 NAME
 
@@ -101,7 +97,7 @@ Edit Logging
 
 ** Backend** records all edit requests in a file called:
 
-ln**m**.**d**.**h**:**m
+ln**m**.**d**.**h**:\*\*m
 
 ** where **m**, **d**, **h**, and **m** are the month,
 day, hour, and minute, respectively that the backend began execution.
@@ -114,11 +110,11 @@ may be reproduced later should **backend** fail, or for whatever
 other reason may arise. If you want to redo the operations recorded
 in an individual log file, edit that file so that it has at least one
 blank line followed by "P0~" at the top, then invoke
-**backend** as
+**backend\*\* as
 
-backend <**logfile
+backend <\*\*logfile
 
-** where **logfile** is the name of the appropriate edit log. The
+** where **logfile\*\* is the name of the appropriate edit log. The
 edit described above is necessary since the metaprotocol does not appear
 in the log.
 
@@ -176,15 +172,9 @@ Since the data structure is easy to corrupt with invalid, but unchecked,
 requests it is a good idea to occasionally copy **enf.enf** to a
 backup file.
 
-
-
 Last change: 25 August 1988
 
-
-
 BACKENDDAEMON(L) LOCAL COMMANDS BACKENDDAEMON(L)
-
-
 
 NAME
 
@@ -216,11 +206,11 @@ program or a shell. This file is used by **backenddaemon**, both
 glue programs, and **xlog**(**L**) to set various run-time values
 to other than their defaults with lines of the form
 
-metaname = **word
+metaname = \*\*word
 
 ** where each program uses a different set of metanames, although
 since they all use the same routine to read the file, lines not used
-by a particular program must still be correct. Lines in .**backendrc**
+by a particular program must still be correct. Lines in .**backendrc\*\*
 beginning with "#" are ignored.
 
 ** Backenddaemon** then tries to open **enf.enf** in the same
@@ -235,12 +225,12 @@ a **socket**(**2**) with AF INET address format and SOCK_STREAM
 communications semantics. This socket is then bound to either the default
 port 55146 or the port given by
 
-port = **port-number
+port = \*\*port-number
 
 ** in .**backendrc**. The socket address is set to INADDR_ANY so
 that connections will be accepted from any host in the domain. **Backenddaemon**
 then waits for frontend connections with **select**(**2**). It
-is up to a frontend or a glue program to attach to the socket with **connect**(**2**).
+is up to a frontend or a glue program to attach to the socket with **connect**(**2\*\*).
 
 After a connection is established, **backenddaemon** reads a device
 name from the socket. This name should be "SOCKET" if frontend
@@ -338,15 +328,9 @@ reflect any limitations in the internal structure of the backend. The
 to not distract from the development of the more intricate Udanax hypertext
 functionality (i.e., it was a quick hack).
 
-
-
 Last change: 25 August 1988
 
-
-
 FEX(L) LOCAL COMMANDS FEX(L)
-
-
 
 NAME
 
@@ -354,9 +338,9 @@ NAME
 
 SYNOPSIS
 
-fex **pipe-from-backend pipe-to-backend
+fex \*\*pipe-from-backend pipe-to-backend
 
-** INVOCATION
+\*\* INVOCATION
 
 ** fex** is normally invoked by a "glue" program such as
 **intf** that starts both the frontend and the backend and sets up
@@ -404,8 +388,6 @@ or an entire screen. The display style can be changed through
 the menu (see below). If a window was created by following
 a link, its display style is initially determined by the three-set
 of that link.
-
-
 
 COMMANDS
 
@@ -515,26 +497,22 @@ This is an experimental frontend. The following bugs are known to exist.
 There are undoubtedly others.
 
 1. Hitting DELETE with the cursor in the first position of a
-window causes a fatal error.
+   window causes a fatal error.
 
 2. Text cannot be inserted below the last line of a document. Attempts
-to do so cause a fatal error. To append text to a document, place
-the cursor at the end of the last line and hit RETURN. Blank lines
-may be appended with repeated RETURNs.
+   to do so cause a fatal error. To append text to a document, place
+   the cursor at the end of the last line and hit RETURN. Blank lines
+   may be appended with repeated RETURNs.
 
 3. Deletion of text in a newly-created document (i.e., one created
-in the current invocation of **fex**) may result in a mispositioning
-of the cursor. The actual document **should** be edited correctly.
-However, it is recommended that editing of newly-created documents
-be kept to a minimum.
+   in the current invocation of **fex**) may result in a mispositioning
+   of the cursor. The actual document **should** be edited correctly.
+   However, it is recommended that editing of newly-created documents
+   be kept to a minimum.
 
 Last change: 25 August 1988
 
-
-
 INTF(L) LOCAL COMMANDS INTF(L)
-
-
 
 NAME
 
@@ -542,9 +520,9 @@ NAME
 
 SYNOPSIS
 
-intf **backend frontend
+intf \*\*backend frontend
 
-** DESCRIPTION
+\*\* DESCRIPTION
 
 ** Intf** uses the **pipe**(**2**) facility to connect a frontend
 program to the standard I/O of a program such as **backend**(**L**).
@@ -557,10 +535,10 @@ branch of the fork then executes the frontend program with the file
 descriptor numbers for the other ends of the pipes passed as command
 line arguments in the form
 
-frontend **pipe-from-backend pipe-to-backend
+frontend \*\*pipe-from-backend pipe-to-backend
 
 ** so that the frontend can communicate with the backend through them.
-**Intf** does not exit if successful, turning into the frontend instead.
+**Intf\*\* does not exit if successful, turning into the frontend instead.
 
 SEE ALSO
 
@@ -568,11 +546,7 @@ backend(L), frontend(L), execl(2), fork(2), pipe(2)
 
 Last change: 25 August 1988
 
-
-
 INTS(L) LOCAL COMMANDS INTS(L)
-
-
 
 NAME
 
@@ -580,9 +554,9 @@ NAME
 
 SYNOPSIS
 
-ints **frontend account
+ints \*\*frontend account
 
-** DESCRIPTION
+\*\* DESCRIPTION
 
 ** Ints** uses the **socket**(**2**) facility to connect a
 frontend program to **daemon**(**L**).
@@ -590,9 +564,9 @@ frontend program to **daemon**(**L**).
 ** Ints** first reads the file .**backendrc** in the current directory.
 If the line
 
-backenddir = **path
+backenddir = \*\*path
 
-** is present, **ints** sets **path** as its working directory,
+** is present, **ints** sets **path\*\* as its working directory,
 otherwise the directory is unchanged.
 
 Next, **ints** acquires a socket with AF_INET address format and
@@ -601,21 +575,21 @@ then binds the socket to a specific port and host. The default port
 is 55146 and the default host is localhost, although these can be changed
 in .**backendrc** with
 
-port = **port-number
+port = \*\*port-number
 
-** and
+\*\* and
 
-host = **host-name
+host = \*\*host-name
 
 Connect**(**2**) is then called with this binding. If the connection
 is not made, **ints** spawns a daemon on the local host machine with
 **fork**(**2**) and **execl**(**2**). The default daemon
-is **backenddaemon** in the directory set above, but this may be
+is **backenddaemon\*\* in the directory set above, but this may be
 changed with
 
-backend = **daemon-name
+backend = \*\*daemon-name
 
-** in .**backendrc**. **Ints** then makes a second attempt to
+** in .**backendrc**. **Ints\*\* then makes a second attempt to
 connect after a 15 second wait. A second failure results in termination.
 
 Once the connection is acquired, **ints** sends the string "SOCKET"
@@ -626,15 +600,15 @@ with the account number from the command line.
 Finally, **ints** executes the frontend program. The default frontend
 is **fex** in the directory set above, but may be changed with
 
-frontend = **frontend-name
+frontend = \*\*frontend-name
 
-** in .**backendrc**. The file descriptor numbers for the socket
+** in .**backendrc\*\*. The file descriptor numbers for the socket
 are passed as command line arguments in the form
 
-frontend **from-backend to-backend
+frontend \*\*from-backend to-backend
 
 ** so that the frontend can communicate with the backend through them.
-**Ints** does not exit if it is successful.
+**Ints\*\* does not exit if it is successful.
 
 FILES
 
@@ -659,11 +633,7 @@ as the second connection attempt will still fail.
 
 Last change: 25 August 1988
 
-
-
 INTX(L) LOCAL COMMANDS INTX(L)
-
-
 
 NAME
 
@@ -671,9 +641,9 @@ NAME
 
 SYNOPSIS
 
-intx **backend account
+intx \*\*backend account
 
-** DESCRIPTION
+\*\* DESCRIPTION
 
 ** Intx** is almost identical to **ints**(**L**). Instead of
 connecting to a frontend via a socket, however, **intx** connects
@@ -698,11 +668,7 @@ Presently requests to the backend are line buffered with **intx**.
 
 Last change: 25 August 1988
 
-
-
 XLOG(L) LOCAL COMMANDS XLOG(L)
-
-
 
 NAME
 
@@ -723,17 +689,17 @@ account 1.1.0.1 is used.
 ** Xlog** first reads .**backendrc** in the current directory.
 If the line
 
-backenddir = **path
+backenddir = \*\*path
 
 ** is present, **xlog** sets **path** as its working directory,
 otherwise the directory is unchanged. **Xlog** then prompts for a
 password (which is not checked), and looks for the account number for
-**user-name** in either **accountfile** in the directory set above,
+**user-name** in either **accountfile\*\* in the directory set above,
 or in the file named by
 
-accountfile = **file-name
+accountfile = \*\*file-name
 
-** in .**backendrc**. This file contains lines with the format
+** in .**backendrc\*\*. This file contains lines with the format
 
 user-name:password:account-number
 
@@ -765,11 +731,7 @@ may be used.
 
 Last change: 25 August 1988
 
-
-
 XUMAIN(L) LOCAL COMMANDS XUMAIN(L)
-
-
 
 NAME
 
@@ -840,7 +802,7 @@ the next spec.
 As an example consider this request to retrieve the first 10 characters
 from the document 1.1.0.1. (The emphasized text is the user's response.):
 
-request? **5
+request? \*\*5
 
 ** any spans or vspecs? (y/n) **y
 
@@ -850,9 +812,9 @@ request? **5
 
 ** any spans? (y/n) **y
 
-** enter span
+\*\* enter span
 
-start=> **1.1
+start=> \*\*1.1
 
 ** width=> **0.10
 
@@ -860,7 +822,7 @@ start=> **1.1
 
 ** any spans of vspecs? (y/n) **n
 
-**
+\*\*
 
 Assuming they are present, **xumain** will then respond with those
 10 characters.
@@ -913,12 +875,6 @@ backup file.
 
 Last change: 25 August 1988
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -933,7 +889,7 @@ Last change: 25 August 1988
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

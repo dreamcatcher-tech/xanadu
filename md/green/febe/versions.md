@@ -1,24 +1,22 @@
 Versions
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
 **Versions**
 
 ---
 
-** Introduction
+\*\* Introduction
 
-**This chapter starts with a simple scenario that highlights the
+\*\*This chapter starts with a simple scenario that highlights the
 need for a document open operation. It then develops the operation, adding
 capability. The examples demonstrate the relation between the document open
 operation and version creation. Finally, the version comparison operation
 is discussed.
 
-**Why Versions?
+\*\*Why Versions?
 
-**The simplest example to show the need for an open operation is
+\*\*The simplest example to show the need for an open operation is
 simultaneous editing of a document by two authors. If they both edit the
 same copy of the document, their conflicting changes could destroy it. The
 first frontend to open the document edits the existing copy. Later frontends
@@ -36,9 +34,9 @@ of locking is acceptable because it only allows the owner of a document
 to change the original version. Other users can make and edit their own
 versions, but they cannot edit the original.
 
-**Read-only and Read-write
+\*\*Read-only and Read-write
 
-**Since documents will often be opened just for reading, the open
+\*\*Since documents will often be opened just for reading, the open
 operation supports two modes: read-only and read-write. The above example
 uses read-write capability for both authors. Reading a document does not
 modify the contents of a document, so multiple users can read a single copy
@@ -56,9 +54,9 @@ if any open operations on that document happened between the close and the
 open operations. If the open fails, the frontend can open a new version
 and redisplay the possibly modified contents.
 
-**Parallel Versions
+\*\*Parallel Versions
 
-**When two authors separately edit different versions of the same
+\*\*When two authors separately edit different versions of the same
 document, they create parallel versions. To recombine these into one version,
 the authors must compare their versions to discover conflicting changes,
 and regions unchanged by either author. Udanax Green's version comparison
@@ -67,9 +65,9 @@ explicitly copy contents. It describes the contents retained by parallel
 versions from their mutual ancestor, the data retained by a sequential version
 from its ancestor, or the contents copied from one document to another.
 
-**Comparison
+\*\*Comparison
 
-**The comparison operation does not compare the contents directly.
+\*\*The comparison operation does not compare the contents directly.
 The version comparison operation must apply to ANY byte representable data.
 Content comparison algorithms such as Unix diff use data-specific heuristics,
 so they cannot possibly work for all types of data. Also, the topological
@@ -82,12 +80,6 @@ record simply by swapping the contents. Like any editing process, the user
 might want to compare alternatives, undo changes, or check differences between
 the current and past versions. Content comparison reveals nothing. The Udanax
 Green comparison operation shows the actual field differences.
-
-
-
-
-
-
 
 ---
 
@@ -103,7 +95,7 @@ Green comparison operation shows the actual field differences.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

@@ -1,7 +1,5 @@
 Related Sites
 
-
-
 [![](images/logo.gif)](index.html)
 
 **Related
@@ -38,10 +36,6 @@ over the planet. The central "character" of the novel is a future
 Web enhanced by the features familiar from the Udanax work -- bi-directional
 links, filters, and detectors.
 
-
-
-
-
 ---
 
 [![](images/logo.gif)](index.html)
@@ -56,7 +50,7 @@ links, filters, and detectors.
 [history](history/index.html)
 [Related Sites](related.html)
 
-*[contact us](contact.html)*
+_[contact us](contact.html)_
 or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

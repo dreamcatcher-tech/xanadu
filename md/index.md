@@ -1,7 +1,5 @@
 Welcome to Udanax.com
 
-
-
 [![](images/logo.gif)](index.html)
 
 **
@@ -24,8 +22,8 @@ on his work in order to realize his vision of hypertext, as well as other
 goals inspired by this vision. Primary among such software are two systems
 developed by Udanax.com, back when it was known as "XOC" or
 "Xanadu Operating Company". These two systems are now known
-as *[Udanax Green](green/index.html)* and *[Udanax
-Gold](gold/index.html)*.
+as _[Udanax Green](green/index.html)_ and _[Udanax
+Gold](gold/index.html)_.
 
 The intellectual property rights to these two systems are
 held by Udanax.com, which brought them both to their current state. Based
@@ -55,27 +53,23 @@ software. See our [license page](license.html) for details.
 The following documents all explain well why we built the
 Udanax systems, and what we hoped to accomplish.
 
-The [*Network
-of Knowledge*](http://e-drexler.com/d/06/00/EOC/EOC_Chapter_14.html) chapter of Eric Drexler's 1986 Engines of Creation,
-and Eric's 1987 paper *[Hypertext
-Publishing and the Evolution of Knowledge](http://e-drexler.com/d/06/00/Hypertext/HPEK0.html)*.
+The [_Network
+of Knowledge_](http://e-drexler.com/d/06/00/EOC/EOC_Chapter_14.html) chapter of Eric Drexler's 1986 Engines of Creation,
+and Eric's 1987 paper _[Hypertext
+Publishing and the Evolution of Knowledge](http://e-drexler.com/d/06/00/Hypertext/HPEK0.html)_.
 
-The [*Philosophy &
-Motivation*](green/febe/philosophy.html) chapter of our 1988 [Green
+The [_Philosophy &
+Motivation_](green/febe/philosophy.html) chapter of our 1988 [Green
 FeBe Manual](green/febe/index.html).
 
-Marc Stiegler's 1989 Unix Review article [*Hypertext
-Publishing*](http://www.skyhunter.com/hyper.htm).
+Marc Stiegler's 1989 Unix Review article [_Hypertext
+Publishing_](http://www.skyhunter.com/hyper.htm).
 
-Mark Miller's 1992? *The Open Society and it Media*
+Mark Miller's 1992? _The Open Society and it Media_
 (content forthcoming).
 
-Ted Nelson's 1999 CACM article [*Xanalogical
-Media*](http://xanadu.net/NOWMORETHANEVER/XuSum99.html).
-
-
-
-
+Ted Nelson's 1999 CACM article [_Xanalogical
+Media_](http://xanadu.net/NOWMORETHANEVER/XuSum99.html).
 
 ---
 
@@ -91,10 +85,7 @@ Media*](http://xanadu.net/NOWMORETHANEVER/XuSum99.html).
 [history](history/index.html)
 [Related Sites](related.html)
 
-*[contact us](contact.html)*
+_[contact us](contact.html)_
 or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)
-
-
-

@@ -1,7 +1,5 @@
 Implementation
 
-
-
 [![](../../images/logo.gif)](../../index.html)
 
 **Implementation**
@@ -14,38 +12,38 @@ of the philosophy and motivation? The major elements of the
 implementation
 are:
 
-* Links
+- Links
 
-* Versions
+- Versions
 
-* Unbounded information pools
+- Unbounded information pools
 
-* Support for cooperating users
+- Support for cooperating users
 
-**Links
+\*\*Links
 
-**Links, more than any other feature, build and maintain
+\*\*Links, more than any other feature, build and maintain
 the web
 of context.
 
 We decided that the essential features were:
 
-* The ability to do extremely fine-grained linking
+- The ability to do extremely fine-grained linking
 
-* The ability to do complex linking
+- The ability to do complex linking
 
-* Allowing the frontend to define and interpret the
-meaning of links
+- Allowing the frontend to define and interpret the
+  meaning of links
 
-* The ability to follow links bidirectionally. The ability
-to enter
-and exit documents quickly when following links.
+- The ability to follow links bidirectionally. The ability
+  to enter
+  and exit documents quickly when following links.
 
-* The preservation of links across edits.
+- The preservation of links across edits.
 
-**Fine-grained Linking
+\*\*Fine-grained Linking
 
-**
+\*\*
 
 In literature, footnotes and quotes may specify a single word.
 Hypertext
@@ -67,56 +65,56 @@ to some predefined hierarchy the writer should decide exactly what
 is included
 as the end of a link.
 
-**Complex Linking
+\*\*Complex Linking
 
-** Letting the writer decide exactly what is included as
+\*\* Letting the writer decide exactly what is included as
 the end
 of a link means providing as much flexibility as possible. The
 ability to
 freely and flexibly construct links means being able to:
 
-* link within documents.
+- link within documents.
 
-* link between documents. Example: a scholar writes a new
-interpretation
-of ancient Greek society, with numerous quotations from
-the writings
-of those times. The scholar could draw links from those
-quotes to
-the original texts, allowing the reader to follow the link
-and see
-the quote in situ.
+- link between documents. Example: a scholar writes a new
+  interpretation
+  of ancient Greek society, with numerous quotations from
+  the writings
+  of those times. The scholar could draw links from those
+  quotes to
+  the original texts, allowing the reader to follow the link
+  and see
+  the quote in situ.
 
-* link to other links. Text itself or whole documents are
-not the
-only things to be linked. Links themselves have
-information content
-on which people might wish to comment.
+- link to other links. Text itself or whole documents are
+  not the
+  only things to be linked. Links themselves have
+  information content
+  on which people might wish to comment.
 
-* group disjoint sets of text, i.e., select a span of
-text, a span
-of links or a span of documents and define them as a
-single unit
-to form one end of a link. (The set of objects that form
-one end
-of a link is known as an "end-set".) On a small
-scale,
-this gives the same capability as when an ellipsis links
-disjoint
-text: "She said...that she would do it." On a
-larger scale,
-there could be a link whose end-set would be the span of
-all the
-documents written by Brian Kernighan. Or, you could
-assemble a link
-that had a set of disjoint spans as an end-set, such as
-everything
-written by Brian Kernighan and everything written by Doug
-Engelbart.
+- group disjoint sets of text, i.e., select a span of
+  text, a span
+  of links or a span of documents and define them as a
+  single unit
+  to form one end of a link. (The set of objects that form
+  one end
+  of a link is known as an "end-set".) On a small
+  scale,
+  this gives the same capability as when an ellipsis links
+  disjoint
+  text: "She said...that she would do it." On a
+  larger scale,
+  there could be a link whose end-set would be the span of
+  all the
+  documents written by Brian Kernighan. Or, you could
+  assemble a link
+  that had a set of disjoint spans as an end-set, such as
+  everything
+  written by Brian Kernighan and everything written by Doug
+  Engelbart.
 
-**Identifying the Meaning of Links
+\*\*Identifying the Meaning of Links
 
-** As the amount of connected material begins to grow, we
+\*\* As the amount of connected material begins to grow, we
 need
 ways to clarify and identify links to avoid being lost in the
 webbed information.
@@ -140,11 +138,11 @@ written by one system are readable by another, but we will not
 enforce any
 policies.
 
-**
+\*\*
 
 Bidirectional Links
 
-** Links need to be at least bidirectional. In other
+\*\* Links need to be at least bidirectional. In other
 words, when
 a link is created, the reader can go in either direction. Of
 course you'd
@@ -167,9 +165,9 @@ Udanax links are actually more powerful than bidirectional links.
 This greater
 power is discussed later in this document.
 
-**Stability Across Changes
+\*\*Stability Across Changes
 
-** Information is dynamic. Documents have to be editable,
+\*\* Information is dynamic. Documents have to be editable,
 and you
 want the links to survive the editing process still connected to
 their material.
@@ -233,9 +231,9 @@ the lineage of the actual bytes and tells how two versions differ
 according
 to the edits that resulted in two documents.
 
-**Unbounded Information Pools
+\*\*Unbounded Information Pools
 
-**Udanax's motivation is to allow users to construct and
+\*\*Udanax's motivation is to allow users to construct and
 use information
 pools of unlimited size. Much software fails because it doesn't
 scale. Many
@@ -252,8 +250,8 @@ working as things scaled beyond our imaginations.
 This decision had interesting implications for edits: what if
 someone wants
 to insert an extra word at the front of a document the size of
-*War and
-Peace* - how would we handle the overhead of moving everything
+_War and
+Peace_ - how would we handle the overhead of moving everything
 that followed?
 So in our system, unlike in traditional systems, when you edit by
 inserting,
@@ -284,12 +282,6 @@ users writing to the same document at the same time. Udanax Green simply
 creates a version for each writer, and then provides the facilities to resolve
 any conflicts.
 
-
-
-
-
-
-
 ---
 
 [![](../../images/logo.gif)](../../index.html)
@@ -304,7 +296,7 @@ any conflicts.
 [history](../../history/index.html)
 [Related Sites](../../related.html)
 
-*[contact us](../../contact.html)*
+_[contact us](../../contact.html)_
 or [![](../../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

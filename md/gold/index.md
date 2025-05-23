@@ -1,17 +1,15 @@
 Home of Udanax Gold
 
-
-
 [![](../images/logo.gif)](../index.html)
 
-**Udanax
+\*\*Udanax
 Gold
 
-Full Transclusive Versioning**
+Full Transclusive Versioning\*\*
 
 ---
 
-# *Opening Date not yet set*
+# _Opening Date not yet set_
 
 Udanax Gold, formerly known as Xanadu 92.1, was in active
 development from 1988 through 1995 at Udanax.com, and briefly at Memex
@@ -22,7 +20,7 @@ for external contribution is the Udanax Green code base. The Udanax Gold
 code base is much larger and more ambitious, and will take more effort
 before it is usable by those who haven't lived through its history. Nevertheless,
 as an irreversible act of disclosure, we are making available on our [download
-page](download/index.html) the bulk of the code, and the code that embodies *all* of
+page](download/index.html) the bulk of the code, and the code that embodies _all_ of
 what we were holding as proprietary secrets -- including General Enfilade
 Theory and The Ent.
 
@@ -73,10 +71,6 @@ bears a strong semantic resemblance to Java.
 
 We look forward to your suggestions.
 
-
-
-
-
 ---
 
 [![](../images/logo.gif)](../index.html)
@@ -91,7 +85,7 @@ We look forward to your suggestions.
 [history](../history/index.html)
 [Related Sites](../related.html)
 
-*[contact us](../contact.html)*
+_[contact us](../contact.html)_
 or [![](../images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 [![Golden Key](../images/key.gif)](http://www.privacy.org/ipc/) [![Blue Ribbon](../images/ribbon.gif)](http://mirrors.yahoo.com/eff/blueribbon.html)

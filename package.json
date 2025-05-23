@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "fmt": "prettier --write '**/*.md'",
+    "fmt:check": "prettier '**/*.md' --check",
+    "links": "linkinator '**/*.md' --markdown --skip '(https?:|mailto:|tel:)' --skip '/node_modules/'",
+    "anchors": "markdownlint-cli2 '**/*.md'",
+    "ok": "npm run fmt:check && npm run links && npm run anchors"
+  },
+  "dependencies": {
+    "linkinator": "^6.1.2",
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "^3.5.3"
+  }
+}

@@ -5,7 +5,7 @@ Welcome to Udanax.com
 [![](images/logo.gif)](index.html)
 
 **
-Udanax.comTM**
+Udanax.com**
 
 **Enfiladic Hypertext**
 
@@ -98,4 +98,3 @@ or [![](images/cmn.gif)](http://www.blindpay.com/crit-me-now.cgi)
 
 
 
-[ ](/access-denied)
